@@ -5,6 +5,7 @@ Bản sao khung web học 21 ngày (`xem-truoc/`) và trang quản trị (`quan-
 ## Trạng thái truy cập hiện tại
 - Không còn đăng ký/học thử, không thu số điện thoại; các buổi học trong 21 ngày đều mở sẵn.
 - Hướng dẫn chỉ mở khi bấm nút **Hướng dẫn**, không tự bật hộp thoại khi vào trang.
+- Trên iPhone/iPad, chọn **Chia sẻ → Thêm vào Màn hình chính** để mở như ứng dụng toàn màn hình.
 - Hồ sơ tên bé chỉ để lưu tiến độ. Máy chủ mùa 3 chỉ cần thiết cho đồng bộ dữ liệu; không khóa quyền học.
 - Các ghi chú tuyển sinh, học thử và kích hoạt ở phần dưới là lịch sử của hệ thống cũ, không áp dụng cho web học hiện tại.
 

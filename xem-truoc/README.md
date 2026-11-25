@@ -6,6 +6,7 @@ Web tự học cho Thử thách 21 ngày Bật phản xạ Anh – Trung (CES Vi
 ## Trạng thái hiện tại
 - Không cần đăng ký hay cung cấp số điện thoại; tên bé chỉ dùng để lưu tiến độ trên máy.
 - Toàn bộ 21 ngày và các tính năng học, xếp hạng, đổi quà đều khả dụng.
+- Trên iPhone/iPad, chọn **Chia sẻ → Thêm vào Màn hình chính** để mở như ứng dụng toàn màn hình.
 - Các mục "Cập nhật" bên dưới là nhật ký các phiên bản cũ; mô tả đăng ký/học thử trong đó không còn áp dụng.
 
 ## Cấu trúc

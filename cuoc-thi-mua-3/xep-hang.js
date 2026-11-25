@@ -69,7 +69,6 @@ function xhRow(x,k){
 
 function viewGold(g, r){
   const G=GROUPS[g]; if(!G) return viewHome();
-  if(DEMO){ location.replace('#/g/'+g); setTimeout(()=>demoGate('vang'),200); return; }
   if(r===undefined || r===null || isNaN(r)) r=xhWeekNow();
   r=Math.max(0,Math.min(3,r|0));
   const now=xhWeekNow();
@@ -133,6 +132,6 @@ async function xhFill(g,r){
 function xhHomeSub(){ const r=xhWeekNow(); return r ? `Tuần ${r} · ${xhLeft(r)}` : 'Tổng 21 ngày'; }
 function xhHomeBadge(g){
   const el=document.querySelector('#tRank .ht-badge'); if(!el) return;
-  if(DEMO || TEACHER || !KID || KID.temp){ el.textContent='🏆'; return; }
+  if(TEACHER || !KID || KID.temp){ el.textContent='🏆'; return; }
   el.textContent='⭐ '+xhMyPoints(g, xhWeekNow())+' tuần này';
 }

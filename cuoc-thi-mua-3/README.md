@@ -2,6 +2,12 @@
 
 Bản sao khung web học 21 ngày (`xem-truoc/`) và trang quản trị (`quan-tri/`), chép ngày 20/11/2026 để chạy mùa 3 mà **không ảnh hưởng trang chính**. Nội dung bài học mùa 3 lấy từ web lớp offline (mục dưới).
 
+## Trạng thái truy cập hiện tại
+- Không còn đăng ký/học thử, không thu số điện thoại; các buổi học trong 21 ngày đều mở sẵn.
+- Hướng dẫn chỉ mở khi bấm nút **Hướng dẫn**, không tự bật hộp thoại khi vào trang.
+- Hồ sơ tên bé chỉ để lưu tiến độ. Máy chủ mùa 3 chỉ cần thiết cho đồng bộ dữ liệu; không khóa quyền học.
+- Các ghi chú tuyển sinh, học thử và kích hoạt ở phần dưới là lịch sử của hệ thống cũ, không áp dụng cho web học hiện tại.
+
 - Web học mùa 3: ../cuoc-thi-mua-3
 - Trang quản trị "Cuộc thi mùa 3": ./quan-tri
 - Chế độ giáo viên: thêm `?gv=1`.
@@ -20,9 +26,8 @@ Ba tệp nối lời với giọng (`canopy-audio-map.js`, `canopy-story-times.j
 Vì tranh, giọng dùng chung: **đừng xoá hay đổi tên** file trong `xem-truoc/tai-nguyen/`; thêm tranh, giọng mới cho mùa 3 thì đặt trong `cuoc-thi-mua-3/` và trỏ tới đó.
 
 ## Việc còn lại trước khi mở mùa 3
-1. Bật máy chủ mùa 3 và dán link `/exec` vào `SCORE_API` (`index.html`) và `API` (`quan-tri/index.html`). Khi còn trống: web học vẫn chạy nhưng chỉ lưu trên máy, chưa mở khoá 21 ngày, chưa có Xếp hạng; trang quản trị báo "chưa nối máy chủ".
-2. Ngày và phí mùa 3 đã điền (20/11/2026): bắt đầu thứ Hai 30/11/2026, không có hạn đăng ký, phí 159.000đ. Sheet mùa 3: https://docs.google.com/spreadsheets/d/1Icr3Kq4J77v4VMmu-CEbCFWQtSxnufAvZ5FEQGsjXH8/edit
-3. `DANG_KY_LINK` (`index.html`) vẫn trỏ trang ưu đãi hiện tại; đổi nếu mùa 3 có trang đăng ký riêng.
+1. Muốn đồng bộ tiến độ/bảng xếp hạng qua máy chủ, dán link `/exec` vào `SCORE_API` (`index.html`) và `API` (`quan-tri/index.html`). Khi chưa nối máy chủ, tiến độ vẫn lưu trên máy; quyền học 21 ngày không bị khóa.
+2. Các ngày bắt đầu, học phí và nội dung tuyển sinh ghi ở nhật ký bên dưới chỉ để tham khảo lịch sử; không còn áp dụng cho luồng truy cập web học.
 
 ## Bài học mùa 3: lấy từ web lớp offline (20/11/2026)
 - **Little Seed**: 18 ngày đầu của web Little Seed lớp offline (`../little-seed/`). **Canopy**: 18 ngày đầu của web Seedling 48 buổi (`../seedling/`).

@@ -1308,8 +1308,7 @@ function viewHome(){
   document.getElementById('tParent').onclick=()=>{ sfx.pop(); parentPanel(); };
   document.getElementById('tTour').onclick=()=>{ sfx.pop(); startTour(true); };
   xhHomeBadge(g);
-  if(!lsGet('lle-tour-seen',false) && STARTED) setTimeout(()=>startTour(false), 400);
-  else if(STARTED && !mapSpoke.home){ mapSpoke.home=true; hdSay(['Chào con! Cô là cô Hươu.']); }
+  if(STARTED && !mapSpoke.home){ mapSpoke.home=true; hdSay(['Chào con! Cô là cô Hươu.']); }
 }
 /* "Ba mẹ đồng hành": thông tin chương trình, các dạng bài, lời nhắn – mở thành bảng nổi */
 function parentPanel(){

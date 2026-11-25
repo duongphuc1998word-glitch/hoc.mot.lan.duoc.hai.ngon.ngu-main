@@ -79,5 +79,4 @@
    trước đây nằm ở lớp 80 nên bị che phía sau. Đưa lên trên màn chúc mừng; thông báo nhỏ và pháo giấy cũng nổi lên để ba mẹ thấy "Cảm ơn ba mẹ!". */
 .overlay.cg{z-index:9600}
 .toast{z-index:9700}
-body.is-demo:not(.in-step) .toast{z-index:9700}
 .confetti{z-index:9650}

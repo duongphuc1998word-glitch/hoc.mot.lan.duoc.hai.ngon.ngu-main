@@ -36,12 +36,6 @@
   #mascot{left:8px;bottom:calc(var(--nav) + 8px)}
   .toast{margin-left:0;bottom:calc(var(--nav) + 14px)}
   .ls-bot{bottom:var(--nav)}
-  /* bản học thử: dải "Đăng ký" nằm ngay trên thanh nút */
-  .demo-rb{bottom:calc(var(--nav) + 8px)}
-  body.is-demo:not(.in-step) .toast{bottom:calc(var(--nav) + 54px)}
-  body.is-demo:not(.in-step) #app{padding-bottom:calc(var(--nav) + 52px)}
-  body.is-demo .world{height:calc(100dvh - var(--nav) - 52px)}
-
   /* các trang "sảnh" được cuộn dọc */
   body.hub{overflow:visible;height:auto}
   body.hub #app{height:auto}

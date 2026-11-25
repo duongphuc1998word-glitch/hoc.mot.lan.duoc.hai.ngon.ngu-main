@@ -44,10 +44,10 @@ function qSave(){ shop().t = Date.now(); save(); }
 function qEarned(){ return myPoints() + qZoomSao(); }
 /* Sao từ Lớp Zoom một màn: cô cộng cuối buổi Zoom (tab "Sao Zoom" trên Sheet), web hỏi máy chủ ?action=zoomsao.
    Chỉ cộng vào ví (Phòng đổi quà), không cộng vào Xếp hạng. Máy chủ chưa lên v16 thì trả bảng vàng, không có trường sao: coi như 0. */
-function qZoomSao(){ const z=lsGet('lle3-zoomsao',null); return (z && KID && KID.id && z.id===KID.id && !DEMO && !TEACHER) ? (+z.n||0) : 0; }
+function qZoomSao(){ const z=lsGet('lle3-zoomsao',null); return (z && KID && KID.id && !TEACHER) ? (+z.n||0) : 0; }
 let qZoomT=0;
 async function qZoomPull(){
-  if(typeof SCORE_API==='undefined' || !SCORE_API || DEMO || TEACHER || !KID || !KID.id || KID.temp) return;
+  if(typeof SCORE_API==='undefined' || !SCORE_API || TEACHER || !KID || !KID.id || KID.temp) return;
   if(Date.now()-qZoomT<60000) return; qZoomT=Date.now();
   try{ const r=await fetch(SCORE_API+'?action=zoomsao&id='+encodeURIComponent(KID.id)); const j=await r.json();
     if(!j || typeof j.sao!=='number') return;
@@ -104,9 +104,8 @@ function parentGate(title, detail, ok){
   setTimeout(()=>inp.focus(), 50);
 }
 function qCanReal(){
-  if(DEMO){ demoGate('qua'); return false; }
   if(TEACHER){ toast('Chế độ giáo viên chỉ xem thử, không đổi quà thật và học bổng.'); return false; }
-  if(!KID || KID.temp){ toast('Ba mẹ đăng nhập bằng tên con và SĐT/Gmail để đổi quà thật nhé.'); askProfile(KID&&KID.group||'', route); return false; }
+  if(!KID || KID.temp){ toast('Ba mẹ tạo hồ sơ nhà thám hiểm để đổi quà nhé.'); askProfile(KID&&KID.group||'', route); return false; }
   return true;
 }
 function qCode(prefix){ const A='ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; let s=''; for(let i=0;i<4;i++) s+=A[Math.floor(Math.random()*A.length)]; return prefix+'-'+s; }
@@ -115,7 +114,7 @@ function qOrder(kind, item){
   const o={code:qCode(kind==='hb'?'HB':'QUA'), kind, id:item.id, n:item.n, p:item.p, at:Date.now(), st:'cho'};
   s.orders.unshift(o); qSave();
   if(SCORE_API){
-    const body=JSON.stringify({action:'redeem', id:KID.id, name:KID.name, acct:KID.acct||'', group:qGroup(), code:o.code, kind, item:item.id, itemName:item.n+(item.vnd?' ('+item.vnd+')':''),
+    const body=JSON.stringify({action:'redeem', id:KID.id, name:KID.name, group:qGroup(), code:o.code, kind, item:item.id, itemName:item.n+(item.vnd?' ('+item.vnd+')':''),
       cost:item.p, earned:qEarned(), spent:s.spent, lessons:qLessons(), zooms:qZooms()});
     try{ fetch(SCORE_API,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body}).catch(()=>{}); }catch(e){}
   }
@@ -132,7 +131,7 @@ function qOrder(kind, item){
 /* hỏi máy chủ trạng thái phiếu; phiếu bị từ chối thì hoàn sao */
 let qChecked=0;
 async function qSyncOrders(force){
-  if(DEMO || !SCORE_API || !KID || !KID.id || KID.temp || TEACHER) return;
+  if(!SCORE_API || !KID || !KID.id || KID.temp || TEACHER) return;
   const s=shop(); if(!s.orders.some(o=>o.st==='cho'||o.st==='duyet')) return;
   if(!force && Date.now()-qChecked<60000) return; qChecked=Date.now();
   try{

@@ -72,7 +72,7 @@ let OLCUR = null;
 function olSrc(g, i) {
   const D = GROUPS[g].days[i].ol, k = (KID && (KID.id || KID.name)) || 'may';
   const kk = String(k).normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^\w-]/g, '').slice(0, 40) || 'may';
-  return `bai-${D.src}/index.html?n=${D.n}&k=${encodeURIComponent((TEACHER ? 'gv-' : DEMO ? 'thu-' : '') + kk)}&ten=${encodeURIComponent((KID && !TEACHER && KID.name) || '')}`;
+  return `bai-${D.src}/index.html?n=${D.n}&k=${encodeURIComponent((TEACHER ? 'gv-' : '') + kk)}&ten=${encodeURIComponent((KID && !TEACHER && KID.name) || '')}`;
 }
 function viewOlDay(g, i) {
   const G = GROUPS[g], day = G.days[i], s = olState(g, i);

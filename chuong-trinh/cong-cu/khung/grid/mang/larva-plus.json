@@ -1,0 +1,2711 @@
+[
+ {
+  "unit": "1",
+  "khoa": "Larva Plus",
+  "chu_de": "Me and my day · Kỹ năng: dạng bài Nghe và Đọc – viết Movers, chiến lược làm bài (Larva U1 · Hello, It's Me)",
+  "ngay_web": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12
+  ],
+  "buoi": [
+   3,
+   4,
+   5,
+   6
+  ],
+  "tu_en": [
+   {
+    "tu": "age",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 5",
+    "goi_lai": [
+     5,
+     6,
+     9,
+     17,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Cocoon U12"
+     ],
+     "xep_them": [
+      "Larva Plus U2"
+     ]
+    }
+   },
+   {
+    "tu": "quarter",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 5",
+    "goi_lai": [
+     5,
+     6,
+     9
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U2",
+      "Pupa U8"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "hour",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 5",
+    "goi_lai": [
+     5,
+     6,
+     9
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Pupa U8",
+      "Pupa U9"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "roof",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 5",
+    "goi_lai": [
+     5,
+     6,
+     9,
+     17,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U6"
+     ],
+     "xep_them": [
+      "Larva Plus U2"
+     ]
+    }
+   },
+   {
+    "tu": "parent",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 6",
+    "goi_lai": [
+     6,
+     7,
+     10,
+     18,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Pupa U1",
+      "Butterfly U4"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "minute",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 6",
+    "goi_lai": [
+     6,
+     7,
+     10
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U3",
+      "Larva Plus U4"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "last year",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 6",
+    "goi_lai": [
+     6,
+     7,
+     10
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Pupa U6",
+      "Butterfly U2"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "grandparent",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 7",
+    "goi_lai": [
+     7,
+     8,
+     11,
+     19,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U3",
+      "Larva Plus U6"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "usually",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (động/tính, 4 ngày); 37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 7",
+    "goi_lai": [
+     7,
+     8,
+     11
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U2",
+      "Larva Plus U4"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "stair",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 7",
+    "goi_lai": [
+     7,
+     8,
+     11,
+     19,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Butterfly U1"
+     ],
+     "xep_them": [
+      "Larva Plus U2"
+     ]
+    }
+   },
+   {
+    "tu": "past",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (chức năng, 4 ngày); 37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 8",
+    "goi_lai": [
+     8,
+     9,
+     12
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U2",
+      "Larva Plus U4"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "meal",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 3 ngày); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 8",
+    "goi_lai": [
+     8,
+     9,
+     12
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Butterfly U4"
+     ],
+     "xep_them": [
+      "Larva Plus U2"
+     ]
+    }
+   },
+   {
+    "tu": "balcony",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 8",
+    "goi_lai": [
+     8,
+     9,
+     12,
+     20,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Cocoon U1"
+     ],
+     "xep_them": [
+      "Larva Plus U2"
+     ]
+    }
+   },
+   {
+    "tu": "half",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (động/tính, 3 ngày); 37c dùng lại ở 3 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 9",
+    "goi_lai": [
+     9,
+     10,
+     13
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U2",
+      "Larva Plus U4"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "how long",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (cụm, 2 ngày); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 9",
+    "goi_lai": [
+     9,
+     10,
+     13
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Cocoon U9",
+      "Cocoon U10"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "basement",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 9",
+    "goi_lai": [
+     9,
+     10,
+     13,
+     21,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Larva Plus U2",
+      "Larva Plus U3"
+     ]
+    }
+   }
+  ],
+  "tu_zh": [
+   {
+    "tu": "小时",
+    "nghia": "hour",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "YCT3",
+    "gap_dau": "ngày 5",
+    "goi_lai": [
+     5,
+     6,
+     9
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Pupa U7",
+      "Pupa U8"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "去年",
+    "nghia": "last year",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37a từ thi bắt tự nói/viết; 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "cần cho YCT口试 (YCT3)",
+    "may_khong_chac": false,
+    "thi": "YCT3",
+    "gap_dau": "ngày 6",
+    "goi_lai": [
+     6,
+     7,
+     10,
+     18,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U6",
+      "Pupa U11"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "半",
+    "nghia": "half",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 4 ngày); 37c dùng lại ở 3 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "cần cho YCT口试 (YCT3)",
+    "may_khong_chac": false,
+    "thi": "YCT3",
+    "gap_dau": "ngày 9",
+    "goi_lai": [
+     9,
+     10,
+     13,
+     21,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U2",
+      "Larva Plus U4"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "多久",
+    "nghia": "how long",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (cụm, 5 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 9",
+    "goi_lai": [
+     9,
+     10,
+     13
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U2"
+     ],
+     "xep_them": [
+      "Larva Plus U3"
+     ]
+    }
+   }
+  ],
+  "tu_cu_quay_lai": {
+   "en": [],
+   "zh": []
+  },
+  "nghe_lai_mang": [
+   "Larva U1"
+  ],
+  "van_ban": [
+   {
+    "id": "R1",
+    "loai": "Mạng văn bản cũ",
+    "nguon": "Larva U1: T1 truyện khung (cài từ hay sai), T2 bài hát, T4 vè"
+   },
+   {
+    "id": "N1",
+    "loai": "Văn bản mới theo dạng đề (Nghe)",
+    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b); cài từ chuyển từ Larva (NL-1)",
+    "tu_en": [
+     "age",
+     "quarter",
+     "hour",
+     "roof",
+     "parent",
+     "minute",
+     "last year",
+     "grandparent",
+     "usually",
+     "stair",
+     "past",
+     "meal",
+     "balcony",
+     "half",
+     "how long",
+     "basement"
+    ],
+    "tu_zh": [
+     "小时",
+     "去年",
+     "半",
+     "多久"
+    ],
+    "yeu_cau": "Độ dài theo đề (ng.t. 62c): mỗi câu nghe 20–60 chữ, 3–6 lượt (Movers); hội thoại YCT3 15–30 chữ Hán"
+   },
+   {
+    "id": "N2",
+    "loai": "Văn bản mới theo dạng đề (Đọc – viết)",
+    "nguon": "đoạn đọc mới theo dạng đề; cài từ chuyển từ Larva (NL-1)",
+    "tu_en": [
+     "age",
+     "quarter",
+     "hour",
+     "roof",
+     "parent",
+     "minute",
+     "last year",
+     "grandparent",
+     "usually",
+     "stair",
+     "past",
+     "meal",
+     "balcony",
+     "half",
+     "how long",
+     "basement"
+    ],
+    "tu_zh": [
+     "小时",
+     "去年",
+     "半",
+     "多久"
+    ],
+    "yeu_cau": "Độ dài theo đề (ng.t. 62c): truyện/đoạn đọc 190–230 chữ, 9–10 chữ/câu (Movers); đoạn YCT3 ~25 chữ Hán"
+   }
+  ],
+  "dem_vong_ngoai": {
+   "age": "N1 + N2 (+ tranh)",
+   "quarter": "N1 + N2 (+ tranh)",
+   "hour": "N1 + N2 (+ tranh)",
+   "roof": "N1 + N2 (+ tranh)",
+   "parent": "N1 + N2 (+ tranh)",
+   "minute": "N1 + N2 (+ tranh)",
+   "last year": "N1 + N2 (+ tranh)",
+   "grandparent": "N1 + N2 (+ tranh)",
+   "usually": "N1 + N2 (+ tranh)",
+   "stair": "N1 + N2 (+ tranh)",
+   "past": "N1 + N2 (+ tranh)",
+   "meal": "N1 + N2 (+ tranh)",
+   "balcony": "N1 + N2 (+ tranh)",
+   "half": "N1 + N2 (+ tranh)",
+   "how long": "N1 + N2 (+ tranh)",
+   "basement": "N1 + N2 (+ tranh)",
+   "小时": "N1 + N2 (+ tranh)",
+   "去年": "N1 + N2 (+ tranh)",
+   "半": "N1 + N2 (+ tranh)",
+   "多久": "N1 + N2 (+ tranh)"
+  },
+  "van_ban_theo_ngay": [
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N2 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N2 văn bản mới dạng đề"
+   ]
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "Larva U1 T1, T2, T4"
+   ],
+   "thoi_luong": "6–8 phút",
+   "bac": "cao"
+  }
+ },
+ {
+  "unit": "2",
+  "khoa": "Larva Plus",
+  "chu_de": "Jobs and school · Kỹ năng: Movers Nghe Part 4 và Đọc – viết Part 4, chiến lược làm bài (Larva U3 · When I Grow Up)",
+  "ngay_web": [
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20
+  ],
+  "buoi": [
+   7,
+   8,
+   9,
+   10
+  ],
+  "tu_en": [
+   {
+    "tu": "vet",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 3 ngày); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 13",
+    "goi_lai": [
+     13,
+     14,
+     17
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Larva Plus U3",
+      "Larva Plus U4"
+     ]
+    }
+   },
+   {
+    "tu": "turn",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (động/tính, 2 ngày); 37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 13",
+    "goi_lai": [
+     13,
+     14,
+     17
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U3",
+      "Larva Plus U5"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "workplace",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 14",
+    "goi_lai": [
+     14,
+     15,
+     18
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Larva Plus U3",
+      "Larva Plus U4"
+     ]
+    }
+   },
+   {
+    "tu": "office",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 15",
+    "goi_lai": [
+     15,
+     16,
+     19
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U3",
+      "Cocoon U4"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "canteen",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 16",
+    "goi_lai": [
+     16,
+     17,
+     20
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U3"
+     ],
+     "xep_them": [
+      "Larva Plus U4"
+     ]
+    }
+   },
+   {
+    "tu": "left",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (động/tính, 1 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 17",
+    "goi_lai": [
+     17,
+     18,
+     21
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U3",
+      "Pupa U4"
+     ],
+     "xep_them": []
+    }
+   }
+  ],
+  "tu_zh": [
+   {
+    "tu": "转",
+    "nghia": "turn",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 13",
+    "goi_lai": [
+     13,
+     14,
+     17
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Pupa U7",
+      "Cocoon U7"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "办公室",
+    "nghia": "office",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 15",
+    "goi_lai": [
+     15,
+     16,
+     19
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U3",
+      "Cocoon U4"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "食堂",
+    "nghia": "canteen",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 16",
+    "goi_lai": [
+     16,
+     17,
+     20
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U3"
+     ],
+     "xep_them": [
+      "Larva Plus U4"
+     ]
+    }
+   },
+   {
+    "tu": "左",
+    "nghia": "left",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 1 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "cần cho YCT口试 (YCT3)",
+    "may_khong_chac": false,
+    "thi": "YCT3",
+    "gap_dau": "ngày 17",
+    "goi_lai": [
+     17,
+     18,
+     21,
+     29,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U3",
+      "Pupa U4"
+     ],
+     "xep_them": []
+    }
+   }
+  ],
+  "tu_cu_quay_lai": {
+   "en": [
+    "age",
+    "roof",
+    "stair",
+    "meal",
+    "balcony",
+    "basement"
+   ],
+   "zh": []
+  },
+  "nghe_lai_mang": [
+   "Larva U3"
+  ],
+  "van_ban": [
+   {
+    "id": "R1",
+    "loai": "Mạng văn bản cũ",
+    "nguon": "Larva U3: T1 truyện khung (cài từ hay sai), T2 bài hát, T4 vè"
+   },
+   {
+    "id": "N1",
+    "loai": "Văn bản mới theo dạng đề (Nghe)",
+    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b); cài từ chuyển từ Larva (NL-1)",
+    "tu_en": [
+     "vet",
+     "turn",
+     "workplace",
+     "office",
+     "canteen",
+     "left"
+    ],
+    "tu_zh": [
+     "转",
+     "办公室",
+     "食堂",
+     "左"
+    ],
+    "yeu_cau": "Độ dài theo đề (ng.t. 62c): mỗi câu nghe 20–60 chữ, 3–6 lượt (Movers); hội thoại YCT3 15–30 chữ Hán"
+   },
+   {
+    "id": "N2",
+    "loai": "Văn bản mới theo dạng đề (Đọc – viết)",
+    "nguon": "đoạn đọc mới theo dạng đề; cài từ chuyển từ Larva (NL-1)",
+    "tu_en": [
+     "vet",
+     "turn",
+     "workplace",
+     "office",
+     "canteen",
+     "left"
+    ],
+    "tu_zh": [
+     "转",
+     "办公室",
+     "食堂",
+     "左"
+    ],
+    "yeu_cau": "Độ dài theo đề (ng.t. 62c): truyện/đoạn đọc 190–230 chữ, 9–10 chữ/câu (Movers); đoạn YCT3 ~25 chữ Hán"
+   }
+  ],
+  "dem_vong_ngoai": {
+   "vet": "N1 + N2 (+ tranh)",
+   "turn": "N1 + N2 (+ tranh)",
+   "workplace": "N1 + N2 (+ tranh)",
+   "office": "N1 + N2 (+ tranh)",
+   "canteen": "N1 + N2 (+ tranh)",
+   "left": "N1 + N2 (+ tranh)",
+   "转": "N1 + N2 (+ tranh)",
+   "办公室": "N1 + N2 (+ tranh)",
+   "食堂": "N1 + N2 (+ tranh)",
+   "左": "N1 + N2 (+ tranh)"
+  },
+  "van_ban_theo_ngay": [
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N2 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N2 văn bản mới dạng đề"
+   ]
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "Larva U3 T1, T2, T4"
+   ],
+   "thoi_luong": "6–8 phút",
+   "bac": "cao"
+  }
+ },
+ {
+  "unit": "3",
+  "khoa": "Larva Plus",
+  "chu_de": "Clothes and shopping · Kỹ năng: Movers Nghe Part 5 và Đọc – viết Part 2, chiến lược làm bài (Larva U4 · My Favourite Colour)",
+  "ngay_web": [
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28
+  ],
+  "buoi": [
+   11,
+   12,
+   13,
+   14
+  ],
+  "tu_en": [
+   {
+    "tu": "let",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (động/tính, 1 ngày); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 21",
+    "goi_lai": [
+     21,
+     22,
+     25
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Butterfly U3"
+     ],
+     "xep_them": [
+      "Larva Plus U4"
+     ]
+    }
+   },
+   {
+    "tu": "size",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 21",
+    "goi_lai": [
+     21,
+     22,
+     25
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Larva Plus U4",
+      "Larva Plus U5"
+     ]
+    }
+   },
+   {
+    "tu": "road",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 21",
+    "goi_lai": [
+     21,
+     22,
+     25,
+     33,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Pupa U4",
+      "Pupa U7"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "money",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 22",
+    "goi_lai": [
+     22,
+     23,
+     26
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U5",
+      "Larva Plus U6"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "city/town centre",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 22",
+    "goi_lai": [
+     22,
+     23,
+     26
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Larva Plus U4",
+      "Larva Plus U5"
+     ]
+    }
+   },
+   {
+    "tu": "café",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 22",
+    "goi_lai": [
+     22,
+     23,
+     26,
+     34,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Larva Plus U4",
+      "Larva Plus U5"
+     ]
+    }
+   },
+   {
+    "tu": "dollar",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 23",
+    "goi_lai": [
+     23,
+     24,
+     27
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Larva Plus U4",
+      "Larva Plus U5"
+     ]
+    }
+   },
+   {
+    "tu": "market",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 23",
+    "goi_lai": [
+     23,
+     24,
+     27,
+     35,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U5",
+      "Butterfly U4"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "station",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 23",
+    "goi_lai": [
+     23,
+     24,
+     27,
+     35,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U6",
+      "Pupa U1"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "yuan",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 24",
+    "goi_lai": [
+     24,
+     25,
+     28
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Cocoon U2",
+      "Cocoon U6"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "city",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 24",
+    "goi_lai": [
+     24,
+     25,
+     28,
+     36,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U6",
+      "Pupa U4"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "sale",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 25",
+    "goi_lai": [
+     25,
+     26,
+     29
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Cocoon U2"
+     ],
+     "xep_them": [
+      "Larva Plus U4"
+     ]
+    }
+   },
+   {
+    "tu": "building",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 25",
+    "goi_lai": [
+     25,
+     26,
+     29,
+     37,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U5",
+      "Larva Plus U6"
+     ],
+     "xep_them": []
+    }
+   }
+  ],
+  "tu_zh": [
+   {
+    "tu": "让",
+    "nghia": "let",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 1 ngày); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "cần cho YCT口试 (YCT3)",
+    "may_khong_chac": false,
+    "thi": "YCT3",
+    "gap_dau": "ngày 21",
+    "goi_lai": [
+     21,
+     22,
+     25,
+     33,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Pupa U2",
+      "Pupa U5"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "咖啡店",
+    "nghia": "café",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 22",
+    "goi_lai": [
+     22,
+     23,
+     26
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U5"
+     ],
+     "xep_them": [
+      "Larva Plus U4"
+     ]
+    }
+   },
+   {
+    "tu": "美元",
+    "nghia": "dollar",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 23",
+    "goi_lai": [
+     23,
+     24,
+     27
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Larva Plus U4",
+      "Larva Plus U5"
+     ]
+    }
+   },
+   {
+    "tu": "元",
+    "nghia": "yuan",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "YCT4",
+    "gap_dau": "ngày 24",
+    "goi_lai": [
+     24,
+     25,
+     28
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Larva Plus U4",
+      "Larva Plus U5"
+     ]
+    }
+   }
+  ],
+  "tu_cu_quay_lai": {
+   "en": [
+    "basement",
+    "vet",
+    "workplace"
+   ],
+   "zh": [
+    "多久"
+   ]
+  },
+  "nghe_lai_mang": [
+   "Larva U4"
+  ],
+  "van_ban": [
+   {
+    "id": "R1",
+    "loai": "Mạng văn bản cũ",
+    "nguon": "Larva U4: T1 truyện khung (cài từ hay sai), T2 bài hát, T4 vè"
+   },
+   {
+    "id": "N1",
+    "loai": "Văn bản mới theo dạng đề (Nghe)",
+    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b); cài từ chuyển từ Larva (NL-1)",
+    "tu_en": [
+     "let",
+     "size",
+     "road",
+     "money",
+     "city/town centre",
+     "café",
+     "dollar",
+     "market",
+     "station",
+     "yuan",
+     "city",
+     "sale",
+     "building"
+    ],
+    "tu_zh": [
+     "让",
+     "咖啡店",
+     "美元",
+     "元"
+    ],
+    "yeu_cau": "Độ dài theo đề (ng.t. 62c): mỗi câu nghe 20–60 chữ, 3–6 lượt (Movers); hội thoại YCT3 15–30 chữ Hán"
+   },
+   {
+    "id": "N2",
+    "loai": "Văn bản mới theo dạng đề (Đọc – viết)",
+    "nguon": "đoạn đọc mới theo dạng đề; cài từ chuyển từ Larva (NL-1)",
+    "tu_en": [
+     "let",
+     "size",
+     "road",
+     "money",
+     "city/town centre",
+     "café",
+     "dollar",
+     "market",
+     "station",
+     "yuan",
+     "city",
+     "sale",
+     "building"
+    ],
+    "tu_zh": [
+     "让",
+     "咖啡店",
+     "美元",
+     "元"
+    ],
+    "yeu_cau": "Độ dài theo đề (ng.t. 62c): truyện/đoạn đọc 190–230 chữ, 9–10 chữ/câu (Movers); đoạn YCT3 ~25 chữ Hán"
+   }
+  ],
+  "dem_vong_ngoai": {
+   "let": "N1 + N2 (+ tranh)",
+   "size": "N1 + N2 (+ tranh)",
+   "road": "N1 + N2 (+ tranh)",
+   "money": "N1 + N2 (+ tranh)",
+   "city/town centre": "N1 + N2 (+ tranh)",
+   "café": "N1 + N2 (+ tranh)",
+   "dollar": "N1 + N2 (+ tranh)",
+   "market": "N1 + N2 (+ tranh)",
+   "station": "N1 + N2 (+ tranh)",
+   "yuan": "N1 + N2 (+ tranh)",
+   "city": "N1 + N2 (+ tranh)",
+   "sale": "N1 + N2 (+ tranh)",
+   "building": "N1 + N2 (+ tranh)",
+   "让": "N1 + N2 (+ tranh)",
+   "咖啡店": "N1 + N2 (+ tranh)",
+   "美元": "N1 + N2 (+ tranh)",
+   "元": "N1 + N2 (+ tranh)"
+  },
+  "van_ban_theo_ngay": [
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N2 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N2 văn bản mới dạng đề"
+   ]
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "Larva U4 T1, T2, T4"
+   ],
+   "thoi_luong": "6–8 phút",
+   "bac": "cao"
+  }
+ },
+ {
+  "unit": "4",
+  "khoa": "Larva Plus",
+  "chu_de": "Animals, weather and health · Kỹ năng: Movers Nghe Part 2 và Đọc – viết Part 3, chiến lược làm bài (Larva U5 · Animals)",
+  "ngay_web": [
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36
+  ],
+  "buoi": [
+   15,
+   16,
+   17,
+   18
+  ],
+  "tu_en": [
+   {
+    "tu": "wolf",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 3 ngày); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 29",
+    "goi_lai": [
+     29,
+     30,
+     33
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Pupa U5"
+     ],
+     "xep_them": [
+      "Larva Plus U5"
+     ]
+    }
+   },
+   {
+    "tu": "dolphin",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 29",
+    "goi_lai": [
+     29,
+     30,
+     33,
+     41,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U5",
+      "Larva Plus U6"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "stomachache",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 29",
+    "goi_lai": [
+     29,
+     30,
+     33
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Larva Plus U5",
+      "Larva Plus U6"
+     ]
+    }
+   },
+   {
+    "tu": "fast",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 30",
+    "goi_lai": [
+     30,
+     31,
+     34
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Pupa U2",
+      "Pupa U3"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "cage",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 3 ngày); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 30",
+    "goi_lai": [
+     30,
+     31,
+     34,
+     42,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Larva Plus U5",
+      "Larva Plus U6"
+     ]
+    }
+   },
+   {
+    "tu": "wind",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 30",
+    "goi_lai": [
+     30,
+     31,
+     34,
+     42,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Pupa U10",
+      "Cocoon U3"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "heavy",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (động/tính, 1 ngày); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 31",
+    "goi_lai": [
+     31,
+     32,
+     35
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Cocoon U4",
+      "Cocoon U6"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "fever",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 31",
+    "goi_lai": [
+     31,
+     32,
+     35
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Pupa U9",
+      "Cocoon U8"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "cough",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 31",
+    "goi_lai": [
+     31,
+     32,
+     35,
+     43,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U5",
+      "Pupa U9"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "kangaroo",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 32",
+    "goi_lai": [
+     32,
+     33,
+     36,
+     44,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U5",
+      "Larva Plus U6"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "sore",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (động/tính, 2 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 32",
+    "goi_lai": [
+     32,
+     33,
+     36
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U6",
+      "Pupa U9"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "temperature",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 32",
+    "goi_lai": [
+     32,
+     33,
+     36,
+     44,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U5",
+      "Larva Plus U6"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "throat",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 33",
+    "goi_lai": [
+     33,
+     34,
+     37
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Pupa U9",
+      "Butterfly U4"
+     ],
+     "xep_them": []
+    }
+   }
+  ],
+  "tu_zh": [
+   {
+    "tu": "狼",
+    "nghia": "wolf",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 5 ngày); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 29",
+    "goi_lai": [
+     29,
+     30,
+     33
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Pupa U5"
+     ],
+     "xep_them": [
+      "Larva Plus U5"
+     ]
+    }
+   },
+   {
+    "tu": "海豚",
+    "nghia": "dolphin",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 5 ngày); 37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 29",
+    "goi_lai": [
+     29,
+     30,
+     33
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U5",
+      "Larva Plus U6"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "快",
+    "nghia": "fast",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37a từ thi bắt tự nói/viết; 37b khung câu mang được (động/tính, 2 ngày); 37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "cần cho YCT口试 (YCT3)",
+    "may_khong_chac": false,
+    "thi": "YCT3",
+    "gap_dau": "ngày 30",
+    "goi_lai": [
+     30,
+     31,
+     34,
+     42,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U5",
+      "Larva Plus U6"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "发烧",
+    "nghia": "fever, temperature",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "YCT4",
+    "gap_dau": "ngày 31",
+    "goi_lai": [
+     31,
+     32,
+     35
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U5",
+      "Larva Plus U6"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "袋鼠",
+    "nghia": "kangaroo",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 4 ngày); 37c dùng lại ở 2 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 32",
+    "goi_lai": [
+     32,
+     33,
+     36
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U5",
+      "Larva Plus U6"
+     ],
+     "xep_them": []
+    }
+   }
+  ],
+  "tu_cu_quay_lai": {
+   "en": [
+    "vet",
+    "workplace",
+    "canteen",
+    "let",
+    "size",
+    "city/town centre",
+    "café",
+    "dollar",
+    "sale"
+   ],
+   "zh": [
+    "食堂",
+    "咖啡店",
+    "美元",
+    "元"
+   ]
+  },
+  "nghe_lai_mang": [
+   "Larva U5"
+  ],
+  "van_ban": [
+   {
+    "id": "R1",
+    "loai": "Mạng văn bản cũ",
+    "nguon": "Larva U5: T1 truyện khung (cài từ hay sai), T2 bài hát, T4 vè"
+   },
+   {
+    "id": "N1",
+    "loai": "Văn bản mới theo dạng đề (Nghe)",
+    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b); cài từ chuyển từ Larva (NL-1)",
+    "tu_en": [
+     "wolf",
+     "dolphin",
+     "stomachache",
+     "fast",
+     "cage",
+     "wind",
+     "heavy",
+     "fever",
+     "cough",
+     "kangaroo",
+     "sore",
+     "temperature",
+     "throat"
+    ],
+    "tu_zh": [
+     "狼",
+     "海豚",
+     "快",
+     "发烧",
+     "袋鼠"
+    ],
+    "yeu_cau": "Độ dài theo đề (ng.t. 62c): mỗi câu nghe 20–60 chữ, 3–6 lượt (Movers); hội thoại YCT3 15–30 chữ Hán"
+   },
+   {
+    "id": "N2",
+    "loai": "Văn bản mới theo dạng đề (Đọc – viết)",
+    "nguon": "đoạn đọc mới theo dạng đề; cài từ chuyển từ Larva (NL-1)",
+    "tu_en": [
+     "wolf",
+     "dolphin",
+     "stomachache",
+     "fast",
+     "cage",
+     "wind",
+     "heavy",
+     "fever",
+     "cough",
+     "kangaroo",
+     "sore",
+     "temperature",
+     "throat"
+    ],
+    "tu_zh": [
+     "狼",
+     "海豚",
+     "快",
+     "发烧",
+     "袋鼠"
+    ],
+    "yeu_cau": "Độ dài theo đề (ng.t. 62c): truyện/đoạn đọc 190–230 chữ, 9–10 chữ/câu (Movers); đoạn YCT3 ~25 chữ Hán"
+   }
+  ],
+  "dem_vong_ngoai": {
+   "wolf": "N1 + N2 (+ tranh)",
+   "dolphin": "N1 + N2 (+ tranh)",
+   "stomachache": "N1 + N2 (+ tranh)",
+   "fast": "N1 + N2 (+ tranh)",
+   "cage": "N1 + N2 (+ tranh)",
+   "wind": "N1 + N2 (+ tranh)",
+   "heavy": "N1 + N2 (+ tranh)",
+   "fever": "N1 + N2 (+ tranh)",
+   "cough": "N1 + N2 (+ tranh)",
+   "kangaroo": "N1 + N2 (+ tranh)",
+   "sore": "N1 + N2 (+ tranh)",
+   "temperature": "N1 + N2 (+ tranh)",
+   "throat": "N1 + N2 (+ tranh)",
+   "狼": "N1 + N2 (+ tranh)",
+   "海豚": "N1 + N2 (+ tranh)",
+   "快": "N1 + N2 (+ tranh)",
+   "发烧": "N1 + N2 (+ tranh)",
+   "袋鼠": "N1 + N2 (+ tranh)"
+  },
+  "van_ban_theo_ngay": [
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N2 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N2 văn bản mới dạng đề"
+   ]
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "Larva U5 T1, T2, T4"
+   ],
+   "thoi_luong": "6–8 phút",
+   "bac": "cao"
+  }
+ },
+ {
+  "unit": "5",
+  "khoa": "Larva Plus",
+  "chu_de": "Sports and food · Kỹ năng: Movers Đọc – viết Part 4 và Nghe Part 4, chiến lược làm bài (Larva U6 · I Like Sports)",
+  "ngay_web": [
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44
+  ],
+  "buoi": [
+   19,
+   20,
+   21,
+   22
+  ],
+  "tu_en": [
+   {
+    "tu": "team",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 37",
+    "goi_lai": [
+     37,
+     38,
+     41
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U6",
+      "Pupa U4"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "player",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 37",
+    "goi_lai": [
+     37,
+     38,
+     41,
+     49,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Pupa U1",
+      "Cocoon U5"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "volleyball",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 38",
+    "goi_lai": [
+     38,
+     39,
+     42
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U6",
+      "Pupa U9"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "goal",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 38",
+    "goi_lai": [
+     38,
+     39,
+     42,
+     50,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Cocoon U7",
+      "Butterfly U4"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "win",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 39",
+    "goi_lai": [
+     39,
+     40,
+     43
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Pupa U2",
+      "Pupa U5"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "funfair",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 39",
+    "goi_lai": [
+     39,
+     40,
+     43,
+     51,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Larva Plus U6",
+      "Pupa U1"
+     ]
+    }
+   },
+   {
+    "tu": "match",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 5 ngày); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "Flyers",
+    "gap_dau": "ngày 40",
+    "goi_lai": [
+     40,
+     41,
+     44
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Cocoon U7",
+      "Cocoon U8"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "ice",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 3 ngày); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 41",
+    "goi_lai": [
+     41,
+     42,
+     45,
+     53,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Pupa U8",
+      "Pupa U11"
+     ],
+     "xep_them": []
+    }
+   }
+  ],
+  "tu_zh": [
+   {
+    "tu": "排球",
+    "nghia": "volleyball",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 3 ngày); 37c dùng lại ở 1 unit sau; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "YCT4",
+    "gap_dau": "ngày 38",
+    "goi_lai": [
+     38,
+     39,
+     42
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Larva Plus U6",
+      "Pupa U9"
+     ],
+     "xep_them": []
+    }
+   }
+  ],
+  "tu_cu_quay_lai": {
+   "en": [
+    "size",
+    "city/town centre",
+    "café",
+    "dollar",
+    "wolf",
+    "stomachache",
+    "cage"
+   ],
+   "zh": [
+    "美元",
+    "元",
+    "狼"
+   ]
+  },
+  "nghe_lai_mang": [
+   "Larva U6"
+  ],
+  "van_ban": [
+   {
+    "id": "R1",
+    "loai": "Mạng văn bản cũ",
+    "nguon": "Larva U6: T1 truyện khung (cài từ hay sai), T2 bài hát, T4 vè"
+   },
+   {
+    "id": "N1",
+    "loai": "Văn bản mới theo dạng đề (Nghe)",
+    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b); cài từ chuyển từ Larva (NL-1)",
+    "tu_en": [
+     "team",
+     "player",
+     "volleyball",
+     "goal",
+     "win",
+     "funfair",
+     "match",
+     "ice"
+    ],
+    "tu_zh": [
+     "排球"
+    ],
+    "yeu_cau": "Độ dài theo đề (ng.t. 62c): mỗi câu nghe 20–60 chữ, 3–6 lượt (Movers); hội thoại YCT3 15–30 chữ Hán"
+   },
+   {
+    "id": "N2",
+    "loai": "Văn bản mới theo dạng đề (Đọc – viết)",
+    "nguon": "đoạn đọc mới theo dạng đề; cài từ chuyển từ Larva (NL-1)",
+    "tu_en": [
+     "team",
+     "player",
+     "volleyball",
+     "goal",
+     "win",
+     "funfair",
+     "match",
+     "ice"
+    ],
+    "tu_zh": [
+     "排球"
+    ],
+    "yeu_cau": "Độ dài theo đề (ng.t. 62c): truyện/đoạn đọc 190–230 chữ, 9–10 chữ/câu (Movers); đoạn YCT3 ~25 chữ Hán"
+   }
+  ],
+  "dem_vong_ngoai": {
+   "team": "N1 + N2 (+ tranh)",
+   "player": "N1 + N2 (+ tranh)",
+   "volleyball": "N1 + N2 (+ tranh)",
+   "goal": "N1 + N2 (+ tranh)",
+   "win": "N1 + N2 (+ tranh)",
+   "funfair": "N1 + N2 (+ tranh)",
+   "match": "N1 + N2 (+ tranh)",
+   "ice": "N1 + N2 (+ tranh)",
+   "排球": "N1 + N2 (+ tranh)"
+  },
+  "van_ban_theo_ngay": [
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N2 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N2 văn bản mới dạng đề"
+   ]
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "Larva U6 T1, T2, T4"
+   ],
+   "thoi_luong": "6–8 phút",
+   "bac": "cao"
+  }
+ },
+ {
+  "unit": "6",
+  "khoa": "Larva Plus",
+  "chu_de": "Holidays and celebrations · Kỹ năng: Movers Nghe Part 5 và Đọc – viết Part 5, chiến lược làm bài (Larva U11 · My Dream Holiday)",
+  "ngay_web": [
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   51,
+   52
+  ],
+  "buoi": [
+   23,
+   24,
+   25,
+   26
+  ],
+  "tu_en": [
+   {
+    "tu": "town/city centre",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ / ngoài danh sách thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "",
+    "gap_dau": "ngày 45",
+    "goi_lai": [
+     45,
+     46,
+     49
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [],
+     "xep_them": [
+      "Pupa U1",
+      "Pupa U2"
+     ]
+    }
+   },
+   {
+    "tu": "world",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "danh từ thi; nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 46",
+    "goi_lai": [
+     46,
+     47,
+     50,
+     58,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Cocoon U10",
+      "Butterfly U1"
+     ],
+     "xep_them": []
+    }
+   },
+   {
+    "tu": "map",
+    "nghia": "",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 3 ngày); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "thi bắt viết (Movers)",
+    "may_khong_chac": false,
+    "thi": "Movers",
+    "gap_dau": "ngày 47",
+    "goi_lai": [
+     47,
+     48,
+     51,
+     59,
+     "khóa ôn / ôn chặng"
+    ],
+    "buoc_chu": true,
+    "quay_lai": {
+     "da_co": [
+      "Pupa U4",
+      "Pupa U7"
+     ],
+     "xep_them": []
+    }
+   }
+  ],
+  "tu_zh": [
+   {
+    "tu": "地图",
+    "nghia": "map",
+    "nhan": "Vòng ngoài",
+    "ly_do": "37b khung câu mang được (danh, 3 ngày); nhãn ghi sẵn trong khung",
+    "ngoai_le_40": "",
+    "may_khong_chac": false,
+    "thi": "YCT4",
+    "gap_dau": "ngày 47",
+    "goi_lai": [
+     47,
+     48,
+     51
+    ],
+    "buoc_chu": false,
+    "quay_lai": {
+     "da_co": [
+      "Pupa U7",
+      "Cocoon U3"
+     ],
+     "xep_them": []
+    }
+   }
+  ],
+  "tu_cu_quay_lai": {
+   "en": [
+    "stomachache",
+    "cage",
+    "funfair"
+   ],
+   "zh": []
+  },
+  "nghe_lai_mang": [
+   "Larva U11"
+  ],
+  "van_ban": [
+   {
+    "id": "R1",
+    "loai": "Mạng văn bản cũ",
+    "nguon": "Larva U11: T1 truyện khung (cài từ hay sai), T2 bài hát, T4 vè"
+   },
+   {
+    "id": "N1",
+    "loai": "Văn bản mới theo dạng đề (Nghe)",
+    "nguon": "nửa thời gian nghe, đọc (ng.t. 7b); cài từ chuyển từ Larva (NL-1)",
+    "tu_en": [
+     "town/city centre",
+     "world",
+     "map"
+    ],
+    "tu_zh": [
+     "地图"
+    ],
+    "yeu_cau": "Độ dài theo đề (ng.t. 62c): mỗi câu nghe 20–60 chữ, 3–6 lượt (Movers); hội thoại YCT3 15–30 chữ Hán"
+   },
+   {
+    "id": "N2",
+    "loai": "Văn bản mới theo dạng đề (Đọc – viết)",
+    "nguon": "đoạn đọc mới theo dạng đề; cài từ chuyển từ Larva (NL-1)",
+    "tu_en": [
+     "town/city centre",
+     "world",
+     "map"
+    ],
+    "tu_zh": [
+     "地图"
+    ],
+    "yeu_cau": "Độ dài theo đề (ng.t. 62c): truyện/đoạn đọc 190–230 chữ, 9–10 chữ/câu (Movers); đoạn YCT3 ~25 chữ Hán"
+   }
+  ],
+  "dem_vong_ngoai": {
+   "town/city centre": "N1 + N2 (+ tranh)",
+   "world": "N1 + N2 (+ tranh)",
+   "map": "N1 + N2 (+ tranh)",
+   "地图": "N1 + N2 (+ tranh)"
+  },
+  "van_ban_theo_ngay": [
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N2 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N1 văn bản mới dạng đề"
+   ],
+   [
+    "R1"
+   ],
+   [
+    "N2 văn bản mới dạng đề"
+   ]
+  ],
+  "nghe_ngam": {
+   "bo": [
+    "Larva U11 T1, T2, T4"
+   ],
+   "thoi_luong": "6–8 phút",
+   "bac": "cao"
+  }
+ }
+]

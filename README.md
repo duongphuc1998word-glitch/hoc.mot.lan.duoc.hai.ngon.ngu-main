@@ -1,0 +1,45 @@
+# Little Language Explorers – Web học tập 21 ngày
+
+Web tự học cho Thử thách 21 ngày Bật phản xạ Anh – Trung (CES Vietnam).
+2 khoá: Little Seed (bé mới bắt đầu) · Canopy (bé khá tiếng Anh, biết chút tiếng Trung). Seedling đang tạm ẩn. Mỗi nhóm 3 vòng, mỗi vòng 6 ngày tự học + 1 buổi Zoom.
+
+## Cấu trúc
+- `index.html` – toàn bộ web (nội dung, trò chơi, điểm, Bảng vàng)
+- `img/` – ảnh minh hoạ (tuỳ chọn), tên file theo danh sách câu lệnh tạo ảnh
+- `.nojekyll` – giúp GitHub Pages phục vụ file nguyên trạng
+
+## Sửa nội dung
+Mở `index.html`, tìm phần `PHẦN DỮ LIỆU`:
+- `SEED_DAYS`, `CANOPY_DAYS` – nội dung 21 ngày của từng khoá (`SEEDLING_DAYS` giữ lại nhưng không hiện)
+- `ZALO_LINK` – nhóm Zalo nộp clip
+- `ZOOM_LINK` – link phòng Zoom (để trống thì web nhắc xem trên Zalo)
+- `SCORE_API` – link Web App Apps Script để bật Bảng vàng Top 10
+
+## Chế độ giáo viên
+Thêm `?gv=1` vào cuối link, hoặc bấm nút "Chế độ giáo viên" ở cuối trang chủ, để mở tất cả các ngày.
+
+## Cập nhật 27/10/2026 (Xếp hạng)
+- **Nút "Xếp hạng" 🏆** trên thanh điều hướng (`#/xep-hang`), thay cho Bảng vàng cũ. Mỗi tuần (mỗi chặng) là một giải đấu của từng khoá, tính từ thứ Hai 26/10/2026 (`XH_START` trong `xem-truoc/xep-hang.js`), có đồng hồ đếm ngược đến hết Chủ nhật.
+- **Nhóm vinh danh**: 5 bạn nhiều sao nhất tuần (`XH_TOP`). Không có nhóm xuống hạng; bạn ở dưới thấy "còn bao nhiêu sao nữa". Dòng của bé được tô xanh, ghi chữ "Con", luôn dùng điểm mới nhất trên máy.
+- Mỗi bạn hiện avatar đã chọn trong Phòng đổi quà (nhân vật, trang phục, nền, khung). Tab Tuần 1/2/3 và Tổng 21 ngày; tuần chưa tới bị khóa.
+- Máy chủ: `apps-script/Code.gs` thêm `?action=xephang` (cả bảng tới 50 bạn, kèm avatar, không lộ mã bé), `ping` trả `v:7`. Chưa cập nhật máy chủ thì web vẫn hiện Top 10 từ bản cũ, avatar các bạn khác là nhân vật mặc định.
+- **Trang chủ có ô "Xếp hạng tuần"** cạnh "Hành trình của con": ảnh là avatar của con, nhãn chỉ ghi số sao con có trong tuần ("⭐ 142 tuần này"), không ghi hạng, dòng dưới ghi tuần và số ngày còn lại. Trang chủ máy tính nay có 2 ô lớn + 6 ô nhỏ.
+
+## Cập nhật 29/10/2026 (Trang quản trị: Gọi sau 3 buổi)
+
+- Trang quản trị có thêm mục **Báo cáo học tập**: mỗi con đã mở khóa 21 ngày một dòng, kèm tình hình học (chưa vào web, cần kéo nhịp, học đều, học vượt…), số ngày học, bài xong, lượt nói, chi tiết theo 4H và câu khen, câu hỏi thêm cho cuộc gọi.
+- Lọc theo người hỗ trợ, tình hình học và cuộc gọi (chưa gọi, đã gọi, đồng ý Zoom, chưa xác nhận Zoom).
+- Hai ô tích **Đã gọi** và **Đồng ý Zoom** lưu ở tab "Gọi sau 3 buổi" của Sheet (tự tạo ở lần tích đầu). Mỗi lần tích ghi một dòng vào Nhật ký cuộc gọi.
+- Việc hôm nay có thêm việc Sale "Gọi sau 3 buổi" (ngày 4–7 của hành trình), tự đóng khi tích Đã gọi. Tin mẫu `goi_3b` dùng khi gọi không gặp.
+- Máy chủ: sửa `apps-script/QuanTri.gs` và `apps-script/Code.gs` (ping trả `v: 12`). Cần dán hai tệp này vào dự án Apps Script của máy chủ web học rồi **Triển khai → Quản lý triển khai → sửa → Phiên bản mới** (giữ nguyên link /exec).
+- Máy chủ Apps Script đã lên phiên bản 14 (ping v:12) ngày 29/10. Máy chủ **không tự cập nhật**: sửa `Code.gs`/`QuanTri.gs` thì dán vào dự án và triển khai phiên bản mới theo `apps-script/TU-DONG-CAP-NHAT.md`.
+
+## Cập nhật 04/11/2026 (Lớp Zoom đợt 1)
+- Thư mục mới **`lop-zoom/`**: web riêng cho buổi Zoom cuối tuần kiểu Wayground, đợt 1 Little Seed Vòng 2 (Zoom Chủ nhật 8/11). Link bé: `…/lop-zoom/` (nhập mã phòng 4 số), chuẩn bị trước: `…/lop-zoom/?chuan-bi`, màn cô: `…/lop-zoom/co.html`. Chi tiết: `lop-zoom/README.md`.
+- Đồng bộ bằng Firebase Realtime Database `anh-trung-kids-zoom`; dùng chung tranh, giọng ở `xem-truoc/tai-nguyen/little-seed`. Cùng tên miền nên máy đã đăng nhập web 21 ngày được điền sẵn tên con và avatar.
+- Máy chủ `apps-script/Code.gs` lên **v15** (`?action=ping` trả `v:15`): thêm `action:'zoom'` (tab "Lớp Zoom") và `action:'zoomhs'` (tab "Chuẩn bị Zoom", ảnh con vào thư mục Drive riêng). Cần dán và triển khai phiên bản mới; Google sẽ hỏi thêm quyền Drive. Chưa cập nhật thì màn cô vẫn tải được CSV.
+
+## Cập nhật 05/11/2026 (Lớp Zoom một màn)
+- Thư mục mới **`lop-zoom-mot-man/`**: bản Lớp Zoom chỉ dùng màn cô (chia sẻ lên Zoom), các con không cần máy thứ hai. Cô thêm bé bằng tên, bấm thay các con ✋ giơ tay / ✅ trả lời đúng (số con gõ trong chat) / 🎤 phát biểu; trận Rồng Lửa có bảng bấm đáp án từng bé; cuối buổi vinh danh, báo cáo theo dữ liệu cô bấm. Bản cũ `lop-zoom/` giữ nguyên. Chi tiết: `lop-zoom-mot-man/README.md`.
+- Máy chủ `apps-script/Code.gs` lên **v16**: `action:'zoommm'` (tab "Lớp Zoom 1 màn" và "Sao Zoom", tự ghép bé theo tên trong TienDo) và `?action=zoomsao&id=` (tổng sao Zoom của một bé).
+- Web học `xem-truoc/qua.js`: ví sao ở Phòng đổi quà cộng thêm sao Zoom (hỏi máy chủ khi mở web / đăng nhập), không đổi Xếp hạng.

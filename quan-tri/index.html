@@ -436,7 +436,7 @@ td.l,th.l{text-align:left}
 
 <script>
 /* Máy chủ: chính link /exec của máy chủ web học (dự án Apps Script có tệp QuanTri.gs) */
-const API = "https://script.google.com/macros/s/AKfycbwsLupVsEa0jqsJ5UDtU1KciL7AiniAhYQk_YZ5N05HESfL6pmSQjcImzZ8nyH9sQ9Lsg/exec";
+const API = ""; // dán URL Web App mới sau khi triển khai Apps Script
 
 let D=null, ME=null, TAB='viec', FILTER={tt:'', q:'', ai:'', sdt:'', ht:'', vht:false, vai:''}, OPEN=null, busy=false, RANGE='all', TK=null, CH={};
 const $=(q,el=document)=>el.querySelector(q);
@@ -457,6 +457,7 @@ const store={ get(){ try{ return sessionStorage.getItem('qt-token')||localStorag
   clear(){ MEM_TOKEN=''; try{ sessionStorage.removeItem('qt-token'); localStorage.removeItem('qt-token'); }catch(e){} } };
 let MEM_TOKEN='', NHO=false;
 async function api(fn, body){
+  if(!API) throw new Error('Máy chủ Apps Script mới chưa được cấu hình.');
   const payload=Object.assign({action:'qt', fn, token:store.get()}, body||{});
   let r;
   try{ r=await fetch(API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)}); }

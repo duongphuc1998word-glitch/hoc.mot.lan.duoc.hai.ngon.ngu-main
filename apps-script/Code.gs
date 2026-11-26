@@ -11,11 +11,12 @@
  *
  * CÁCH BẬT (làm 1 lần, khoảng 5 phút):
  *   1. Đăng nhập tài khoản Google sở hữu Sheet dữ liệu, mở script.google.com → Dự án mới (mã Sheet ở DATA_ID bên dưới).
- *   2. Xoá code mẫu, dán toàn bộ file này, bấm Lưu.
+ *   2. Dán file này vào Code.gs; thêm QuanTri.gs vào cùng dự án từ apps-script/QuanTri.gs.
  *   3. Bấm Triển khai → Tùy chọn triển khai mới → loại "Ứng dụng web".
  *        Thực thi với tư cách: Tôi        Ai có quyền truy cập: Bất kỳ ai
  *   4. Bấm Triển khai, cho phép quyền truy cập, chép "URL ứng dụng web" (đuôi /exec).
- *   5. Dán URL đó vào  xem-truoc/index.html  ở dòng  const SCORE_API = "…";
+ *   5. Dán URL đó vào SCORE_API trong xem-truoc/index.html, LZ_API trong hai tệp lz-core.js,
+ *      và API trong quan-tri/index.html. Các URL hiện để trống để không gọi máy chủ cũ.
  *
  * Sheet tự tạo 3 trang:
  *   TienDo : mã bé | tên | tài khoản (đã che) | khoá | cập nhật | tiến độ (JSON)
@@ -142,7 +143,7 @@ function doGet(e) {
  * Không trả mã bé của các bạn khác. Bảng được giữ trong bộ nhớ đệm 45 giây cho đỡ tải Sheet. */
 function xepHang_(p) {
   const g = String(p.group || '').slice(0, 20), round = Math.max(0, Math.min(3, +p.round || 0)), kid = String(p.kid || '');
-  const cache = CacheService.getScriptCache(), key = 'xh1-' + g + '-' + round;
+  const cache = CacheService.getScriptCache(), key = 'xh2-' + g + '-' + round;
   let all = null;
   try { const hit = cache.get(key); if (hit) all = JSON.parse(hit); } catch (e) { }
   if (!all) {
@@ -316,20 +317,18 @@ function dangKy_(p) {
  * Không gửi số điện thoại thật; mã băm = 16 ký tự đầu SHA-256 của "lle|" + số đã chuẩn hóa (giống hashStr ở web).
  * Thứ tự xét:
  *   1. Ô "Mở khóa 21 ngày" trong tab "Gia đình" được tick (đội tick trên trang quản trị hoặc thẳng trên Sheet) → mở.
- *   2. Số nằm trong danh sách ĐÃ ĐÓNG PHÍ (tab Đăng ký Web của Sheet này, và các tab Đăng ký Web, Google Form,
- *      Danh sách đóng tiền của Sheet DATA Dự án cũ) → mở, trừ khi đội đã chủ động khóa
+ *   2. Số nằm trong danh sách ĐÃ ĐÓNG PHÍ ở tab Đăng ký Web của Sheet này → mở, trừ khi đội đã chủ động khóa
  *      (bỏ tick trên trang quản trị, cột "Mở khóa lúc" ghi "Khóa …").
  *   3. Bé đã có tiến độ trong tab TienDo (đã học bản đầy đủ trước khi có một link) vẫn học tiếp.
  *      Từ khi có một link, chỉ máy đã được mở khóa mới ghi được vào TienDo.
  * Kết quả giữ trong bộ nhớ đệm 60 giây để web chạy nhanh khi nhiều bé vào cùng lúc. */
-const OLD_DATA_ID = '1antBQ-MDz2a4U-w-B2y6XTnF1Pzln7QwwUxxJm5TanI';
 function hashAcct_(a) {
   const b = Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_256, 'lle|' + a, Utilities.Charset.UTF_8);
   return b.slice(0, 8).map(x => ((x + 256) % 256).toString(16).padStart(2, '0')).join('');
 }
 function yes_(v) { return v === true || String(v).toUpperCase() === 'TRUE'; }
 function bangMoKhoa_() {
-  const cache = CacheService.getScriptCache(), hit = cache.get('mo-khoa-v1');
+  const cache = CacheService.getScriptCache(), hit = cache.get('mo-khoa-v2');
   if (hit) return JSON.parse(hit);
   const gd = {}, paid = {}, ss = ss_();
   const sh = ss.getSheetByName('Gia đình');
@@ -351,14 +350,10 @@ function bangMoKhoa_() {
     } catch (e) { }
   };
   read(ss, 'Đăng ký Web', 2, 14);
-  try {
-    const old = SpreadsheetApp.openById(OLD_DATA_ID);
-    read(old, 'Đăng ký Web', 2, 14); read(old, 'Google Form', 2, 12); read(old, 'Danh sách đóng tiền ', 4, 6);
-  } catch (e) { }
   const cu = {}, td = ss.getSheetByName('TienDo');
   if (td && td.getLastRow() > 1) td.getRange(2, 1, td.getLastRow() - 1, 1).getValues().forEach(r => { if (r[0]) cu[String(r[0])] = 1; });
   const out = { gd: gd, paid: paid, cu: cu };
-  try { cache.put('mo-khoa-v1', JSON.stringify(out), 60); } catch (e) { }
+  try { cache.put('mo-khoa-v2', JSON.stringify(out), 60); } catch (e) { }
   return out;
 }
 function access_(p) {

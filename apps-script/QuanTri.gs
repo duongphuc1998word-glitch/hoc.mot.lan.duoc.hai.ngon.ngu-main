@@ -14,7 +14,7 @@
  * Ai mở được Sheet thì đọc được mã này; nhập mã trên trang để tạo tài khoản Quản lý hoặc đặt lại mật khẩu.
  * Mã đổi mới sau mỗi lần dùng. Vì vậy chỉ Quản lý giữ quyền mở Sheet; bạn Vận hành không cần quyền Sheet.
  *
- * Dùng chung với Code.gs: DATA_ID, ss_, GD_HEAD, COT_MO_KHOA, OLD_DATA_ID, normPhone_, yes_, json_.
+ * Dùng chung với Code.gs: DATA_ID, ss_, GD_HEAD, COT_MO_KHOA, normPhone_, yes_, json_.
  */
 
 const QT_C = {}; GD_HEAD.forEach((h, i) => QT_C[h] = i);
@@ -339,12 +339,11 @@ function qtLuuTaiKhoan_(s, tk) {
 /* ===================== đồng bộ đơn đăng ký vào tab Gia đình ===================== */
 function qtNguonDangKy_(ss) {
   const out = [];
-  const read = (name, map, book, chiDaDong) => {
-    const sh = (book || ss).getSheetByName(name); if (!sh || sh.getLastRow() < 2) return;
+  const read = (name, map) => {
+    const sh = ss.getSheetByName(name); if (!sh || sh.getLastRow() < 2) return;
     sh.getRange(2, 1, sh.getLastRow() - 1, sh.getLastColumn()).getValues().forEach(r => {
       const phone = normPhone_(r[map.phone]); if (!phone) return;
-      if (chiDaDong && !(map.paid != null && yes_(r[map.paid]))) return;
-      out.push({ nguon: (book ? 'Sheet cũ · ' : '') + name.trim(), t: qtMs_(r[map.t]), parent: String(r[map.parent] || '').trim(), phone: phone,
+      out.push({ nguon: name.trim(), t: qtMs_(r[map.t]), parent: String(r[map.parent] || '').trim(), phone: phone,
         kid: String(r[map.kid] || '').trim(), age: map.age != null ? String(r[map.age] || '') : '', khoa: map.khoa != null ? qtKhoa_(r[map.khoa]) : '',
         ho: map.ho != null ? String(r[map.ho] || '').trim() : '', paid: map.paid != null && yes_(r[map.paid]),
         ref: map.ref != null ? String(r[map.ref] || '').trim().toUpperCase() : '', biet: map.biet != null ? String(r[map.biet] || '').trim() : '',
@@ -352,12 +351,6 @@ function qtNguonDangKy_(ss) {
     });
   };
   read('Đăng ký Web', { t: 0, parent: 1, phone: 2, kid: 4, age: 5, biet: 8, anh: 9, khoa: 10, ho: 12, paid: 14, ref: 15, fam: 16 });
-  try {
-    const old = SpreadsheetApp.openById(OLD_DATA_ID);
-    read('Đăng ký Web', { t: 0, parent: 1, phone: 2, kid: 4, age: 5, anh: 9, khoa: 10, ho: 12, paid: 14, ref: 15 }, old, true);
-    read('Google Form', { t: 0, parent: 1, phone: 2, kid: 4, age: 5, anh: 9, ho: 10, paid: 12 }, old, true);
-    read('Danh sách đóng tiền ', { t: null, parent: 1, kid: 2, age: 3, phone: 4, paid: 6 }, old, true);
-  } catch (e) { }
   return out;
 }
 /* Khóa so khớp số điện thoại: bỏ +84/84 và các số 0 đầu (Sheet hay làm mất số 0 đầu). Gmail giữ nguyên chữ thường. */

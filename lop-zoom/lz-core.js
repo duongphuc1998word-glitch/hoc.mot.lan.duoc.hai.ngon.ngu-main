@@ -12,7 +12,7 @@ const LZ_FIREBASE = {
   appId: "1:1029047261945:web:1ff02524454503361fa028"
 };
 /* Máy chủ Apps Script của web học (cùng link SCORE_API trong xem-truoc/index.html) – nhận kết quả buổi Zoom và hồ sơ chuẩn bị. */
-const LZ_API = "https://script.google.com/macros/s/AKfycbwsLupVsEa0jqsJ5UDtU1KciL7AiniAhYQk_YZ5N05HESfL6pmSQjcImzZ8nyH9sQ9Lsg/exec";
+const LZ_API = ""; // dán URL Web App mới sau khi triển khai Apps Script
 
 const QS = new URLSearchParams(location.search);
 const LZ_MOCK = QS.has('mock');
@@ -621,9 +621,15 @@ function bossInfo(room) {
   return { pre: false, run: b.run || 0, t, H, prog, pos, surge: !done && bump > 0.35, done, left: Math.max(0, T - el), hits: hits.sort((x, y) => x[0] - y[0]) };
 }
 
-/* Gửi lên máy chủ Apps Script (Sheet "Anh-Trung-Kids – Dữ liệu dự án") */
+/* Gửi lên máy chủ Apps Script dùng Sheet dữ liệu mới */
 async function apiPost(body) {
+  if (!LZ_API) throw new Error('Chưa cấu hình máy chủ Apps Script mới.');
   const r = await fetch(LZ_API, { method: 'POST', body: JSON.stringify(body) });
+  return r.json();
+}
+async function apiGet(path) {
+  if (!LZ_API) throw new Error('Chưa cấu hình máy chủ Apps Script mới.');
+  const r = await fetch(LZ_API + path);
   return r.json();
 }
 

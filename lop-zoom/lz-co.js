@@ -914,7 +914,7 @@ async function sendSheet() {
   } catch (e) { m.innerHTML = '<p class="msg err">Chưa gửi được (mạng hoặc máy chủ chưa cập nhật). Cô bấm Tải CSV để giữ kết quả.</p>'; return; }
   /* cộng sao vào ví sao web học (tab "Sao Zoom"; gửi lại cùng phòng + ngày thì ghi đè, không cộng trùng) */
   try {
-    const pg = await (await fetch(LZ_API + '?action=ping&t=' + Date.now())).json();
+    const pg = await apiGet('?action=ping&t=' + Date.now());
     if (!pg || !(pg.v >= 16)) { m.innerHTML = msg + `<p class="msg err">Chưa cộng sao: máy chủ đang ở bản v${pg && pg.v}. Cần triển khai <b>apps-script/Code.gs</b> bản v16.</p>`; return; }
     const j2 = await apiPost({ action: 'zoommm', chiSao: true, buoi: 'phong' + CODE + '-' + ngay, ngay, lop: LZ_CFG.ten, khoa: LZ_CFG.khoa, vong: LZ_CFG.vong,
       rows: rows.map(r => ({ ma: r.id, kid: r.kid, parent: r.parent, web: r.web, tay: r.tay, dung: r.dung, rong: 0, noi: r.noi, sao: r.sao, note: r.note })) });

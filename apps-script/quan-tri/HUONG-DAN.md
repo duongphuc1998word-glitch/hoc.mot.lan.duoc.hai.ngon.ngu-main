@@ -1,17 +1,20 @@
-# Trang quản trị Anh-Trung-Kids (bản có tài khoản, từ 26/10/2026)
+# Trang quản trị (bản có tài khoản)
 
 **Link trang quản trị:** ../../quan-tri
 
 - Đăng nhập bằng **tên đăng nhập + mật khẩu**, không cần tài khoản Google, không còn bước "cấp quyền".
-- Trang nói chuyện với **chính máy chủ web học** (dự án Apps Script "Anh-Trung-Kids – Máy chủ web học", link `…AKfycbwsLupV…/exec`). Phần quản trị nằm ở tệp `apps-script/QuanTri.gs` trong cùng dự án đó.
-- Dữ liệu vẫn chỉ nằm trong Sheet "Anh-Trung-Kids – Dữ liệu dự án". Trang GitHub không chứa dữ liệu nào; phải đăng nhập mới tải được.
+- Trang nói chuyện với Web App được triển khai từ `apps-script/Code.gs` và `apps-script/QuanTri.gs` trong cùng dự án.
+- Dữ liệu lưu trong Sheet có ID đặt tại `DATA_ID`; trang GitHub không chứa dữ liệu người dùng.
+- Endpoint cũ đã được gỡ. Các cấu hình API để trống cho đến khi triển khai Web App mới và dán URL `/exec`.
 - Dự án Apps Script riêng "Anh-Trung-Kids – Quản trị" (các tệp trong thư mục này: Code.gs, TrangQuanTri.html) **không dùng nữa**. Có thể xóa bản triển khai `AKfycbzmjn…` của nó.
 
-## Cập nhật máy chủ (mỗi khi có bản mới)
-1. `https://script.google.com/u/2/home` (tài khoản anhtrung.home) → dự án **Anh-Trung-Kids – Máy chủ web học**.
-2. Tệp `Code.gs`: dán đè `apps-script/Code.gs`. Tệp **QuanTri.gs** (＋ → Tập lệnh, tên `QuanTri`): dán đè `apps-script/QuanTri.gs`. **Lưu**.
-3. **Triển khai → Quản lý các bản triển khai** → bút chì → Phiên bản: **Phiên bản mới** → **Triển khai**. Link /exec giữ nguyên.
-4. Kiểm tra: mở link /exec thêm `?action=ping`, thấy `"v":10` là đúng (bản có việc theo vai trò, offer và nhiệm vụ theo bản đồ).
+## Tạo và triển khai Apps Script mới
+1. Đăng nhập Google sở hữu Sheet mới, mở `script.google.com` → **Dự án mới**.
+2. Dán `apps-script/Code.gs` vào tệp `Code.gs`; bấm **＋ → Tập lệnh**, tạo `QuanTri.gs` rồi dán `apps-script/QuanTri.gs`. Lưu cả hai.
+3. Chọn **Triển khai → Tùy chọn triển khai mới → Ứng dụng web**; chạy với tư cách **Tôi** và cấp quyền truy cập cần thiết cho trang web.
+4. Triển khai, chấp thuận quyền Google, sao chép URL kết thúc bằng `/exec`. Kiểm tra bằng cách mở URL kèm `?action=ping`; phản hồi cần có `"ok":true`.
+5. Dán URL vào các cấu hình `SCORE_API`, `LZ_API` và `API` như hướng dẫn ở đầu `apps-script/Code.gs`, rồi tải các trang web lên lại.
+6. Không bấm **Run** khi dropdown vẫn chọn `myFunction`; hàm đó không có trong dự án. Dùng URL Web App để kiểm tra `doGet`.
 
 ## Việc theo vai trò: CTV · Sale · Cố vấn (từ 27/10/2026, máy chủ `v:8`)
 
@@ -71,12 +74,12 @@ Số đóng phí và doanh thu, đăng ký, bé học hôm nay, bé nghỉ từ 
 
 ---
 
-# Ghi chép cũ (bản đăng nhập Google, đã thay)
+# Ghi chép cũ (chỉ lưu lịch sử; không dùng để triển khai)
 
 # Bật máy chủ mới, trang quản trị và trang cuộc thi (tài khoản anhtrung.home@gmail.com)
 
 Mọi dữ liệu của dự án nay nằm trong **một Sheet** thuộc Drive của **anhtrung.home@gmail.com**:
-"Anh-Trung-Kids – Dữ liệu dự án" (mã `1QQnbTRwpbu6wGmrtnbwAW0VVyyk1AA7xlHQb_GwFOic`).
+"Anh-Trung-Kids – Dữ liệu dự án" (Sheet cũ, đã thay bằng Sheet mới).
 Sheet mới bắt đầu trống và đang ở chế độ **Bị hạn chế** (chỉ người được thêm mới mở được). Các Sheet cũ (DATA Dự án, Tiến độ & Bảng vàng của Duyên) không còn nhận dữ liệu mới sau khi làm xong bước 2.
 
 ## Trạng thái

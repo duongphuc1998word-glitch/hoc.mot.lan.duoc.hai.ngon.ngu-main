@@ -3,12 +3,11 @@
  *
  * Đây là một dự án Apps Script RIÊNG, khác với máy chủ của web học (apps-script/Code.gs).
  * Trang chạy bằng chính tài khoản Google của người mở, nên:
- *   – ai không có quyền mở Sheet Anh-Trung-Kids – Dữ liệu dự án thì không xem được gì;
+ *   – ai không có quyền mở Sheet dữ liệu hiện tại thì không xem được gì;
  *   – ai có quyền nhưng chưa có tên trong tab "Đội" thì trang báo "chưa có quyền".
  * Không có dữ liệu nào của bé nằm trên GitHub Pages.
  *
- * Mọi dữ liệu nằm trong Sheet "Anh-Trung-Kids – Dữ liệu dự án" của anhtrung.home@gmail.com (cùng Sheet với máy chủ web học).
- * Sheet DATA Dự án cũ không còn dùng. Tab dùng:
+ * Mọi dữ liệu nằm trong Sheet do chủ dự án quản lý (cùng Sheet với máy chủ web học). Tab dùng:
  *   Gia đình          – mỗi gia đình một dòng, một trạng thái (web học tạo khi ba mẹ để lại Zalo;
  *                       trang này tự thêm gia đình từ "Đăng ký Web" – đơn của trang ưu đãi)
  *   Truy cập học thử  – sự kiện học thử theo mã người xem (để chấm điểm và vẽ phễu)
@@ -23,13 +22,12 @@
  * CÁCH BẬT: xem apps-script/quan-tri/HUONG-DAN.md
  */
 
-const DATA_ID = '1QQnbTRwpbu6wGmrtnbwAW0VVyyk1AA7xlHQb_GwFOic';    // Sheet "Anh-Trung-Kids – Dữ liệu dự án" (Drive anhtrung.home@gmail.com)
+const DATA_ID = '1TybNFaDpm1gr7NmcBBGe6uGuOZ7uiZTimOuH-z1vNg4';
 const TIEN_DO_ID = DATA_ID;                                          // phiếu đổi quà (tab DoiQua) cũng nằm ở đây
 
 const GD_HEAD = ['Mã gia đình', 'Tạo lúc', 'Nguồn', 'Mã người xem', 'Mã CTV', 'Tên ba/mẹ', 'Số Zalo', 'Tên con', 'Tuổi', 'Khoá',
   'ĐY học tập', 'ĐY tư vấn', 'ĐY tin ưu đãi', 'Trạng thái', 'Đổi trạng thái lúc', 'Người hỗ trợ', 'Liên hệ đầu', 'Liên hệ gần nhất',
   'Hẹn gọi lại', 'Lý do dừng', 'Ghi chú', 'Điểm', 'Làn', 'Mở khóa 21 ngày', 'Mở khóa lúc'];
-const OLD_DATA_ID = '1antBQ-MDz2a4U-w-B2y6XTnF1Pzln7QwwUxxJm5TanI';  // Sheet DATA Dự án cũ: chỉ lấy gia đình ĐÃ ĐÓNG PHÍ
 const C = {};  GD_HEAD.forEach((h, i) => C[h] = i);
 
 const TRANG_THAI = ['Đang dùng thử', 'Mời đăng ký', 'Chờ đóng phí', 'Đang học 21 ngày', 'Chờ tư vấn khóa dài', 'Đã tư vấn',
@@ -129,25 +127,17 @@ function tinMau_(ss) {
 /* ===================== đồng bộ đăng ký vào Bảng Gia đình ===================== */
 function nguonDangKy_(ss) {
   const out = [];
-  const read = (name, map, book, chiDaDong) => {
-    const sh = (book || ss).getSheetByName(name); if (!sh || sh.getLastRow() < 2) return;
+  const read = (name, map) => {
+    const sh = ss.getSheetByName(name); if (!sh || sh.getLastRow() < 2) return;
     sh.getRange(2, 1, sh.getLastRow() - 1, sh.getLastColumn()).getValues().forEach(r => {
       const phone = normPhone_(r[map.phone]); if (!phone) return;
-      if (chiDaDong && !(map.paid != null && yes_(r[map.paid]))) return;
-      out.push({ nguon: (book ? 'Sheet cũ · ' : '') + name.trim(), t: ms_(r[map.t]), parent: String(r[map.parent] || '').trim(), phone: phone,
+      out.push({ nguon: name.trim(), t: ms_(r[map.t]), parent: String(r[map.parent] || '').trim(), phone: phone,
         kid: String(r[map.kid] || '').trim(), age: map.age != null ? String(r[map.age] || '') : '', khoa: map.khoa != null ? khoaTen_(r[map.khoa]) : '',
         ho: map.ho != null ? String(r[map.ho] || '').trim() : '', paid: map.paid != null && yes_(r[map.paid]), ref: map.ref != null ? String(r[map.ref] || '').trim().toUpperCase() : '',
         anh: map.anh != null ? String(r[map.anh] || '') : '', fam: map.fam != null ? String(r[map.fam] || '').trim() : '' });
     });
   };
   read('Đăng ký Web', { t: 0, parent: 1, phone: 2, kid: 4, age: 5, anh: 9, khoa: 10, ho: 12, paid: 14, ref: 15, fam: 16 });
-  // gia đình đã đóng phí trước khi chuyển sang Sheet mới (Sheet DATA Dự án cũ)
-  try {
-    const old = SpreadsheetApp.openById(OLD_DATA_ID);
-    read('Đăng ký Web', { t: 0, parent: 1, phone: 2, kid: 4, age: 5, anh: 9, khoa: 10, ho: 12, paid: 14, ref: 15 }, old, true);
-    read('Google Form', { t: 0, parent: 1, phone: 2, kid: 4, age: 5, anh: 9, ho: 10, paid: 12 }, old, true);
-    read('Danh sách đóng tiền ', { t: null, parent: 1, kid: 2, age: 3, phone: 4, paid: 6 }, old, true);
-  } catch (e) { }
   return out;
 }
 function dongBo_(ss, rows) {

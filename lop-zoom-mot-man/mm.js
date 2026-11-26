@@ -720,7 +720,7 @@ function reportBox() {
   $('#send', ov).onclick = async () => {
     const m = $('#sendMsg', ov); m.innerHTML = '<p class="msg">Đang gửi…</p>';
     try {
-      const pg = await (await fetch(LZ_API + '?action=ping&t=' + Date.now())).json();
+      const pg = await apiGet('?action=ping&t=' + Date.now());
       if (!pg || !(pg.v >= 16)) { m.innerHTML = `<p class="msg err">Máy chủ đang ở bản v${pg && pg.v}. Cần dán <b>apps-script/Code.gs</b> và triển khai bản v16 thì mới cộng sao được. Cô bấm Tải CSV để giữ kết quả.</p>`; return; }
       const t = reportTable();
       const rows = reportRows().map((r, j) => ({ ma: r.ma, kid: r.kid, parent: r.parent, tay: r.tay, dung: r.chat, rong: r.rong, noi: r.noi, sao: r.sao, note: r.note, cells: t.rows[j] }));

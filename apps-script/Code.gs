@@ -1,7 +1,7 @@
 /**
  * Little Language Explorers – máy chủ nhỏ trên Google Apps Script
  * Một link Web App dùng cho mọi việc của dự án, ghi tất cả vào CHÍNH Sheet chứa script này
- * ("Anh-Trung-Kids – Dữ liệu dự án", Drive anhtrung.home@gmail.com). Các Sheet cũ không còn dùng.
+ * (Google Sheet dữ liệu do chủ dự án quản lý). Các Sheet cũ không còn dùng.
  *   1) Lưu / mở lại tiến độ học của từng bé (đăng nhập bằng tên con + SĐT/Gmail, không mật khẩu)
  *   2) Bảng vàng Top 10 theo khoá và chặng; Xếp hạng mỗi tuần (?action=xephang) cả bảng kèm avatar
  *   3) Sự kiện học thử theo mã CTV (tab "Truy cập học thử")
@@ -10,7 +10,7 @@
  *   6) Trang quản trị (tệp QuanTri.gs trong CÙNG dự án này): đăng nhập tên + mật khẩu, việc hôm nay, báo cáo
  *
  * CÁCH BẬT (làm 1 lần, khoảng 5 phút):
- *   1. Đăng nhập anhtrung.home@gmail.com, mở script.google.com → Dự án mới (mã Sheet dữ liệu ở DATA_ID bên dưới).
+ *   1. Đăng nhập tài khoản Google sở hữu Sheet dữ liệu, mở script.google.com → Dự án mới (mã Sheet ở DATA_ID bên dưới).
  *   2. Xoá code mẫu, dán toàn bộ file này, bấm Lưu.
  *   3. Bấm Triển khai → Tùy chọn triển khai mới → loại "Ứng dụng web".
  *        Thực thi với tư cách: Tôi        Ai có quyền truy cập: Bất kỳ ai
@@ -31,8 +31,8 @@
  * Vì vậy Sheet này chỉ chia sẻ cho đội, không để "bất kỳ ai có đường liên kết".
  */
 
-/* Sheet dữ liệu của dự án (Drive anhtrung.home@gmail.com). Script này là dự án riêng, không gắn vào Sheet. */
-const DATA_ID = '1QQnbTRwpbu6wGmrtnbwAW0VVyyk1AA7xlHQb_GwFOic';
+/* Sheet dữ liệu do tài khoản Google của bạn quản lý. Script này là dự án riêng, không gắn vào Sheet. */
+const DATA_ID = '1TybNFaDpm1gr7NmcBBGe6uGuOZ7uiZTimOuH-z1vNg4';
 function ss_() { return SpreadsheetApp.openById(DATA_ID); }
 function sheet_(name, head) {
   const ss = ss_();

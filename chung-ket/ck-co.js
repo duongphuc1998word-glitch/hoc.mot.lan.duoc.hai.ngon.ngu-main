@@ -1,6 +1,5 @@
 /* Chung kết Rung chuông vàng – màn cô (máy tính).
-   Cô mở phòng, chia sẻ màn chiếu lên Zoom, bấm qua 4 phần; tab Kết quả cập nhật trực tiếp từ Firebase,
-   xếp hạng riêng Little Seed và Canopy. Cửa sổ "Bảng xếp hạng" (index.html?bang=MÃ) để đưa vào OBS khi livestream. */
+   Cô mở phòng, chia sẻ màn chiếu lên Zoom, bấm qua 4 phần; tab Kết quả cập nhật trực tiếp từ Firebase. */
 const app = $('#app');
 let CODE = '', room = {}, TAB = 'dk', lastHtmlKey = '';
 const base = () => roomPath(CODE);
@@ -8,13 +7,12 @@ const ST = () => room.state || {};
 function setState(o) { return DB.update(base() + '/state', o).catch(er => alert('Chưa lưu được: ' + er.message)); }
 function linkKid() { return location.href.replace(/co\.html.*$/, '') + '?phong=' + CODE; }
 function linkChieu() { return location.href.replace(/co\.html.*$/, '') + '?chieu=' + CODE; }
-function linkBang() { return location.href.replace(/co\.html.*$/, '') + '?bang=' + CODE; }
 
 /* ---------- mở phòng ---------- */
 function startScreen(msg) {
   const old = lsGet('ck-co-room', null);
   app.innerHTML = `<div class="wrap"><div class="card"><h2>🔔 Chung kết Rung chuông vàng · Màn cô</h2>
-    <p class="vn">Mở phòng mới để có mã 4 số. Các con Little Seed và Canopy vào cùng một phòng, web tự xếp hạng riêng theo level.</p>
+    <p class="vn">Mở phòng mới để có mã 4 số. Các con Little Seed và Canopy cùng tham gia; level chỉ chọn nội dung phù hợp.</p>
     ${msg ? `<p class="msg err">${esc(msg)}</p>` : ''}
     <div class="ctl"><button class="btn red" id="nw">Mở phòng chung kết mới</button>
     ${old ? `<button class="btn ghost" id="od">Vào lại phòng ${esc(old.code)}</button>` : ''}</div></div></div>`;
@@ -67,7 +65,6 @@ const ACT = {
   bossNew() { const b = ST().boss || {}; return setState({ boss: { run: (b.run || 0) + 1, dur: b.dur || CK_BOSS_DUR } }); },
   p4(step) { const p = ST().p4 || {}; return setState({ p4: { run: p.run || 0, step, sc: 0, t0: DB.now() } }); },
   p4New() { const p = ST().p4 || {}; return setState({ p4: { run: (p.run || 0) + 1, step: 'cho' } }); },
-  bang() { return setState({ bang: !ST().bang }); }
 };
 window.ckKey = e => {
   if (!CODE) return;
@@ -90,7 +87,6 @@ function drawBar() {
   if (s.ph === 'p1' || s.ph === 'p2') B.push(['prev', '← Câu trước', 'ghost'], ['show', s.step === 'rv' ? '↺ Ẩn đáp án' : '👁 Hiện đáp án', 'y'], ['next', 'Câu tiếp →', ''], ['replay', '🔊 Phát lại', 'ghost']);
   if (s.ph === 'p3') B.push(['bossStart', '⚔️ Bắt đầu trận', 'red'], ['bossEnd', '⏹ Kết thúc', 'ghost']);
   if (s.ph === 'p4') B.push(['p4:nghe', '🎧 Phát truyện', ''], ['p4:xep', '🧩 Xếp tranh', 'y'], ['p4:rv', '👁 Đáp án', 'red'], ['prev', '← Cảnh', 'ghost'], ['next', 'Cảnh →', 'ghost']);
-  B.push(['bang', s.bang ? '📊 Ẩn bảng' : '📊 Hiện bảng', 'ghost']);
   $('#shareBar').innerHTML = `<span class="lb">${ph.ic} ${esc(ph.n)}${s.ph === 'p1' || s.ph === 'p2' ? ` · câu ${(s.i || 0) + 1}` : ''}</span>` + B.map(([a, t, c]) => `<button class="btn sm ${c}" data-a="${a}">${t}</button>`).join('') + `<button class="btn sm ghost" id="shX">✖ Về màn điều khiển</button>`;
   $$('#shareBar [data-a]').forEach(b => b.onclick = () => { const [a, x] = b.dataset.a.split(':'); ACT[a](x); });
   $('#shX').onclick = shareOff;
@@ -110,12 +106,9 @@ function draw() {
       <button class="btn red sm" id="shOn">🖥 Chia sẻ lên Zoom</button>
       <button class="btn ghost sm" id="cpK">📋 Chép link cho ba mẹ</button>
       <a class="btn ghost sm" href="${esc(linkChieu())}" target="_blank" rel="noopener">📺 Cửa sổ màn chiếu</a>
-      <a class="btn ghost sm" href="${esc(linkBang())}" target="_blank" rel="noopener">📊 Cửa sổ bảng xếp hạng (OBS)</a>
-      <button class="btn ${ST().bang ? 'y' : 'ghost'} sm" id="bgT">${ST().bang ? '📊 Đang hiện bảng trên màn chiếu' : '📊 Hiện bảng trên màn chiếu'}</button>
     </div>`;
   $('#shOn').onclick = shareOn;
   $('#cpK').onclick = () => { navigator.clipboard && navigator.clipboard.writeText(`Chung kết Rung chuông vàng: ${linkKid()} · Mã phòng ${CODE}`); $('#cpK').textContent = '✅ Đã chép'; };
-  $('#bgT').onclick = ACT.bang;
   const body = $('#body');
   const keep = document.activeElement && body.contains(document.activeElement) && /INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName);
   if (TAB === 'dk') body.innerHTML = drawDk(S);
@@ -153,7 +146,7 @@ function drawDk(S) {
       <p>${Object.entries(CK_LV).map(([lv, n]) => `${n}: <b>${ok.filter(x => seatLv(room, x) === lv).length}</b>`).join(' · ')}</p>`;
   } else if (ph === 'p1') {
     const i = s.i || 0, q = CK_P1[i], qid = 'p1_' + i;
-    mid = `<h3>🌱 Phần 1 · Câu ${i + 1}/${CK_P1.length}</h3><p class="small">Cả lớp làm chung, không tính xếp hạng, đúng được sao. Màn chiếu phát tiếng; cô hiện đáp án thì màn chiếu đọc cả hai tiếng.</p>
+    mid = `<h3>🌱 Phần 1 · Câu ${i + 1}/${CK_P1.length}</h3><p class="small">Cả lớp làm chung; câu đúng được sao, không cộng vào tổng điểm. Màn chiếu phát tiếng; cô hiện đáp án thì màn chiếu đọc cả hai tiếng.</p>
       <p><span class="ck-lvtag ${q.lv}">${CK_LV[q.lv]} · Vòng ${q.r}: ${esc(CK_ROUNDS[q.lv][q.r - 1])}</span> <b>${CK_T[q.t]}</b></p>
       <div class="prev">🔊 <b>${esc(ckTxt(q.w, q.l))}</b> <span class="flag ${q.l}">${q.l === 'zh' ? '中文' : 'EN'}</span> ${q.o.map((k, j) => optPrev({ t: 'img', k }, j === 0)).join('')}</div>
       ${ctlQ(s)}<p class="count">${countDone(ok, qid)}</p>`;
@@ -194,8 +187,7 @@ function drawDk(S) {
       <p class="count">${countDone(ok, qid)}</p>`;
     side = `<h3>Bé 1 máy: cô nhập điểm xếp tranh (0–7)</h3><div class="kids">${ok.filter(x => !x.on || /^t_/.test(x.id)).map(x => `<div class="kid${x.on ? '' : ' off'}"><img src="${faceOf(x)}" alt=""><div class="nm">${esc(x.kid)}</div><div class="row"><select data-p4="${x.id}"><option value="">–</option>${[0, 1, 2, 3, 4, 5, 6, 7].map(n => `<option${(((room.marks || {})[x.id] || {}).p4 === n) ? ' selected' : ''}>${n}</option>`).join('')}</select></div></div>`).join('') || '<p class="small">Không có bé nào cần bấm hộ.</p>'}</div>`;
   } else if (ph === 'trao') {
-    const res = ckResults(room);
-    mid = `<h3>🏆 Trao giải</h3><p class="small">Màn chiếu hiện top 5 mỗi level và pháo giấy. Máy mỗi bé hiện giải của con. Kết quả đầy đủ ở tab Kết quả.</p><div class="ck-board">${Object.keys(CK_LV).map(lv => ckBoardHTML(res, lv, 5)).join('')}</div>`;
+    mid = `<h3>🎉 Chúc mừng cả lớp</h3><p class="small">Màn chiếu chúc mừng tất cả các con theo thứ tự tham gia. Mỗi bé xem tổng điểm của mình trên máy. Kết quả đầy đủ ở tab Kết quả.</p>`;
   }
   if (!side) side = `<h3>Các bé (${ok.length})</h3><div class="kids">${ok.map(x => `<div class="kid${x.on ? '' : ' off'}"><img src="${faceOf(x)}" alt=""><div class="nm"><span class="dot"></span>${esc(x.kid)}</div><div class="meta">${CK_LV[seatLv(room, x)]}</div></div>`).join('')}</div>`;
   return `<div class="co-grid"><div class="panel">${phaseList()}</div><div class="panel">${mid}</div><div class="panel">${side}</div></div>`;
@@ -210,22 +202,22 @@ function drawBe(S) {
   return `<div class="wrap wide"><div class="panel"><h3>Thêm bé (bé chỉ có 1 máy, hoặc vào giúp)</h3>
     <div class="ctl"><input id="aKid" placeholder="Tên con"><input id="aPar" placeholder="Tên ba hoặc mẹ"><select id="aLv">${Object.entries(CK_LV).map(([k, n]) => `<option value="${k}">${n}</option>`).join('')}</select><button class="btn sm" id="aGo">+ Thêm</button></div>
     <p class="small">Bé vào sau bằng mã phòng với đúng tên sẽ tự nhận chỗ này.</p></div>
-    <div class="panel" style="margin-top:12px"><table class="res"><tr><th></th><th>Tên con</th><th>Ba/mẹ</th><th>Level (xếp hạng)</th><th>Trạng thái</th><th></th></tr>
+    <div class="panel" style="margin-top:12px"><table class="res"><tr><th></th><th>Tên con</th><th>Ba/mẹ</th><th>Level</th><th>Trạng thái</th><th></th></tr>
     ${S.map(x => `<tr${x.ok ? '' : ' style="opacity:.5"'}><td><img src="${faceOf(x)}" alt="" style="width:34px;height:34px;border-radius:50%;object-fit:cover"></td><td><b>${esc(x.kid)}</b>${/^t_/.test(x.id) ? ' <span class="tag tam">cô thêm</span>' : ''}</td><td>${esc(x.parent)}</td>
       <td><select data-lv="${x.id}">${Object.entries(CK_LV).map(([k, n]) => `<option value="${k}"${seatLv(room, x) === k ? ' selected' : ''}>${n}</option>`).join('')}</select></td>
-      <td>${x.on ? '🟢 đang vào' : '⚪ chưa vào / rớt mạng'}</td><td><button class="btn ghost sm" data-hide="${x.id}">${x.ok ? 'Ẩn khỏi xếp hạng' : 'Hiện lại'}</button></td></tr>`).join('')}</table></div></div>`;
+      <td>${x.on ? '🟢 đang vào' : '⚪ chưa vào / rớt mạng'}</td><td><button class="btn ghost sm" data-hide="${x.id}">${x.ok ? 'Ẩn khỏi danh sách' : 'Hiện lại'}</button></td></tr>`).join('')}</table></div></div>`;
 }
 
 /* ---------- tab Kết quả (trực tiếp) ---------- */
 function drawKq() {
   const res = ckResults(room);
   return `<div class="wrap wide"><div class="ctl"><button class="btn sm" id="csv">⬇ Tải CSV</button><span class="small">Cập nhật trực tiếp. Tổng điểm = Phần 2 (30%, chia 15 câu) + Phần 3 (30%, chia ${res.p3max} là số câu đúng cao nhất buổi thi) + Phần 4 (40%, chia 7). Mỗi câu đúng 1 điểm, bậc nào cũng vậy. Phần 1 chỉ tích sao.</span></div>
-    ${Object.entries(CK_LV).map(([lv, n]) => `<div class="panel" style="margin-top:12px"><h3>${n} · ${res.by[lv].length} bé</h3><div class="scroll-x"><table class="res"><tr><th>Hạng</th><th>Tên con</th><th>Ba/mẹ</th><th>⭐ P1</th><th>P2 (/15)</th><th>P3 câu đúng</th><th>P4 (/7)</th><th>Tổng</th><th>Giải</th><th>Bậc cuối P2</th></tr>
-      ${res.by[lv].map(r => `<tr><td><b>${r.hang}</b></td><td>${esc(r.seat.kid)}</td><td>${esc(r.seat.parent)}</td><td>${r.sao}</td><td>${r.p2}${r.p2done < CK_P2N ? ` <span class="small">(làm ${r.p2done})</span>` : ''}</td><td>${r.p3}</td><td>${r.p4 == null ? '–' : r.p4}</td><td><b>${r.tong}</b></td><td>${CK_CUP[r.giai]} ${esc(r.giai)}</td><td class="small">${r.band}</td></tr>`).join('')}</table></div></div>`).join('')}</div>`;
+    <div class="panel" style="margin-top:12px"><h3>Kết quả · ${res.rows.length} bé</h3><div class="scroll-x"><table class="res"><tr><th>Level</th><th>Tên con</th><th>Ba/mẹ</th><th>⭐ P1</th><th>P2 (/15)</th><th>P3 câu đúng</th><th>P4 (/7)</th><th>Tổng</th><th>Bậc cuối P2</th></tr>
+      ${res.rows.map(r => `<tr><td>${CK_LV[r.lv]}</td><td>${esc(r.seat.kid)}</td><td>${esc(r.seat.parent)}</td><td>${r.sao}</td><td>${r.p2}${r.p2done < CK_P2N ? ` <span class="small">(làm ${r.p2done})</span>` : ''}</td><td>${r.p3}</td><td>${r.p4 == null ? '–' : r.p4}</td><td><b>${r.tong}</b></td><td class="small">${r.band}</td></tr>`).join('')}</table></div></div></div>`;
 }
 function csv() {
-  const res = ckResults(room), rows = [['Level', 'Hạng', 'Tên con', 'Ba/mẹ', 'Sao Phần 1', 'Phần 2 (/15)', 'Phần 3 câu đúng', 'Phần 4 (/7)', 'Tổng', 'Giải', 'Bậc cuối Phần 2']];
-  Object.entries(res.by).forEach(([lv, L]) => L.forEach(r => rows.push([CK_LV[lv], r.hang, r.seat.kid, r.seat.parent, r.sao, r.p2, r.p3, r.p4 == null ? '' : r.p4, r.tong, r.giai, r.band])));
+  const res = ckResults(room), rows = [['Level', 'Tên con', 'Ba/mẹ', 'Sao Phần 1', 'Phần 2 (/15)', 'Phần 3 câu đúng', 'Phần 4 (/7)', 'Tổng', 'Bậc cuối Phần 2']];
+  res.rows.forEach(r => rows.push([CK_LV[r.lv], r.seat.kid, r.seat.parent, r.sao, r.p2, r.p3, r.p4 == null ? '' : r.p4, r.tong, r.band]));
   const txt = '﻿' + rows.map(r => r.map(c => '"' + String(c).replace(/"/g, '""') + '"').join(',')).join('\n');
   const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([txt], { type: 'text/csv' })); a.download = `chung-ket-${CODE}-${today()}.csv`; a.click();
 }

@@ -28,7 +28,6 @@
 <link rel="stylesheet" href="khen.css">
 <link rel="stylesheet" href="dien-thoai.css">
 <link rel="stylesheet" href="huong-dan-clip.css">
-<link rel="stylesheet" href="xep-hang.css">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+SC:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:light;
@@ -307,9 +306,6 @@ a.btn,a.gcard,a.lnk{text-decoration:none}
 .stop.done .dot{animation:shine 3s ease-in-out infinite}
 @keyframes shine{0%,100%{filter:brightness(1)}50%{filter:brightness(1.12)}}
 .rpts{margin-left:auto;background:var(--yellow-soft);border:2px solid var(--yellow);border-radius:999px;padding:2px 10px;font-weight:800;font-size:15px}
-.gold{display:block;text-align:center;margin-top:14px;padding:8px;border-radius:14px;border:2px dashed #E8D6A8;color:var(--muted);font-weight:800;text-decoration:none}
-.gold.on{background:linear-gradient(90deg,#FFE27A,#FFC72C,#FFE27A);background-size:200% 100%;border:2px solid #F2A900;color:var(--ink);animation:sheen 2.5s linear infinite}
-@keyframes sheen{to{background-position:-200% 0}}
 .rdone{border-color:var(--yellow)}
 .final .trophy{animation:bob 2.4s ease-in-out infinite}
 
@@ -376,23 +372,6 @@ a.gtab{text-decoration:none}
 .modal .small{font-size:13px;text-align:left;margin:0}
 .mart .art{animation:spin 6s linear infinite}
 
-/* ===== bảng vàng ===== */
-.goldhead{display:flex;gap:12px;align-items:center;margin:18px 0 10px}
-.goldhead h2{margin:0;font-size:28px}.goldhead small{color:var(--muted);font-weight:700}
-.goldhead .art{animation:bob 2.4s infinite}
-.podium{display:flex;justify-content:center;align-items:flex-end;gap:10px;margin:10px 0 18px}
-.pod{flex:1;max-width:150px;text-align:center;animation:rise .6s var(--d,0s) both}
-.pn{font-weight:800;font-size:17px;line-height:1.1;margin-top:4px;word-break:break-word}
-.pp{color:var(--muted);font-weight:700;font-size:14px}
-.pb{margin-top:6px;border-radius:14px 14px 0 0;color:#fff;font-weight:800;font-size:28px;display:grid;place-items:center}
-.p1 .pb{height:110px;background:linear-gradient(#FFD34D,#F2A900)}
-.p2 .pb{height:80px;background:linear-gradient(#D9DEE5,#A8B1BD)}
-.p3 .pb{height:60px;background:linear-gradient(#F0B98A,#C9814A)}
-.p1 .pm .art{animation:bob 2s infinite}
-.ranks{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
-.ranks li{display:flex;align-items:center;gap:10px;background:var(--cream);border-radius:14px;padding:8px 12px;animation:rise .4s var(--d,0s) both}
-.rn{width:30px;height:30px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-weight:800;flex:none}
-.nm{flex:1;font-weight:800;min-width:0;overflow-wrap:anywhere}.pt{font-weight:800;color:var(--red);font-variant-numeric:tabular-nums}
 .loading{text-align:center;color:var(--muted)}
 
 .newtab{opacity:.6}
@@ -449,7 +428,6 @@ a.gtab{text-decoration:none}
   <a class="sd-btn c1" href="#/"><span class="sd-ic">🏠</span><span>Trang chủ</span></a>
   <a class="sd-btn c2" id="sdMap" href="#/"><span class="sd-ic">🗺️</span><span>Bản đồ</span></a>
   <a class="sd-btn c6" id="sdQua" href="#/qua"><span class="sd-ic">🎁</span><span>Đổi quà</span></a>
-  <a class="sd-btn c7" id="sdRank" href="#/xep-hang"><span class="sd-ic">🏆</span><span>Xếp hạng</span></a>
   <button class="sd-btn c3" id="sdBack" type="button"><span class="sd-ic">↩️</span><span>Quay lại</span></button>
   <button class="sd-btn c4" id="sdHelp" type="button"><span class="sd-ic">❓</span><span>Hướng dẫn</span></button>
   <button class="sd-btn c5" id="muteBtn" type="button" aria-label="Bật/tắt tiếng hiệu ứng (giọng đọc vẫn phát)"><span class="sd-ic" id="muteIc">🔊</span><span>Tiếng</span></button>
@@ -470,7 +448,6 @@ a.gtab{text-decoration:none}
 <script src="qua.js?v=20261105z"></script>
 <script src="khen.js"></script>
 <script src="huong-dan-clip.js"></script>
-<script src="xep-hang.js"></script>
 <script>
 /* =====================================================================
    PHẦN DỮ LIỆU — SỬA NỘI DUNG Ở ĐÂY
@@ -1301,7 +1278,6 @@ function viewHome(){
       ${hubTile({id:'tParent', img:'tai-nguyen/trang/ls_man_khen.webp', c:'#F28C00', t:'Ba mẹ đồng hành', sub:'Chương trình · cách học'})}
       ${hubTile({id:'tTour', img:'tai-nguyen/nhan-vat/huou_huou1_a.webp', size:'auto 92%', pos:'50% 100%', bg:'#DDEBFF', c:'#2F6FD6', t:'Hướng dẫn', sub:'Cô Hươu chỉ cách học'})}
       ${hubTile({href:'#/hanh-trinh', img:'tai-nguyen/trang/ls_stickers.webp', pos:'50% 50%', size:'auto 92%', bg:'#FFF8E1', c:'#C9A227', t:'Hành trình của con', sub:'Huy hiệu · ngày học · lần nói'})}
-      ${hubTile({id:'tRank', href:'#/xep-hang', img:typeof avaSrc==='function'?avaSrc():'tai-nguyen/nhan-vat/kids_bong_a.webp', size:'auto 92%', pos:'50% 100%', bg:'#DDF4F6', c:'#1597A8', t:'Xếp hạng tuần', sub:xhHomeSub(), badge:'🏆'})}
       ${hubTile({href:'#/qua', img:'tai-nguyen/qua/gift_rubik.webp', size:'auto 62%', pos:'50% 55%', bg:'#FFE4EC', c:'#E3487A', t:'Phòng đổi quà', sub:'Đổi sao lấy quà', badge:'⭐ '+qWallet()})}
       ${hubTile({href:`#/g/${g}/them/${Math.min(3,Math.max(1,Math.ceil((doneCount(g)+1)/6)))}`, img:'tai-nguyen/trang/ls_o_xem.webp', c:'#7B5CD6', t:'Góc khám phá', sub:'Video, trò chơi thêm'})}
     </div>
@@ -1310,7 +1286,6 @@ function viewHome(){
   const tb=document.getElementById('tbtn'); if(tb) tb.onclick=toggleTeacher;
   document.getElementById('tParent').onclick=()=>{ sfx.pop(); parentPanel(); };
   document.getElementById('tTour').onclick=()=>{ sfx.pop(); startTour(true); };
-  xhHomeBadge(g);
   if(STARTED && !mapSpoke.home){ mapSpoke.home=true; hdSay(['Chào con! Cô là cô Hươu.']); }
 }
 /* "Ba mẹ đồng hành": thông tin chương trình, các dạng bài, lời nhắn – mở thành bảng nổi */
@@ -1322,7 +1297,7 @@ function parentPanel(){
     <ol class="intro-steps">
       <li><b>3 chặng · mỗi chặng 6 buổi</b><span>Vòng khám phá → Vòng bứt phá → Vòng chinh phục. Mỗi buổi 12–15 phút; toàn bộ 21 ngày đều mở sẵn để con tự chọn.</span></li>
       <li><b>Zoom cuối mỗi chặng</b><span>Con gặp cô giáo trực tuyến, ôn lại cả chặng và nói cùng các bạn.</span></li>
-      <li><b>Sao và Xếp hạng</b><span>Mỗi bước làm xong được sao. Mỗi tuần là một giải đấu: 5 bạn nhiều sao nhất của mỗi khoá vào Nhóm vinh danh. Bảng không có nhóm xuống hạng, bạn ở dưới chỉ thấy còn bao nhiêu sao nữa. <a href="#/xep-hang">🏆 Xem Xếp hạng →</a></span></li>
+      <li><b>Sao của con</b><span>Mỗi bước làm xong được sao để con đổi quà. Con học theo nhịp riêng của mình; không so sánh với bạn khác.</span></li>
       <li><b>Chung kết tỏa sáng</b><span>Học đủ 18 buổi để sẵn sàng thi Chung kết livestream.</span></li>
     </ol>
     <h4>Mỗi buổi con học gì? <small>(chạm ô để nghe)</small></h4>
@@ -1355,7 +1330,7 @@ const TOUR = [
   {img:'tai-nguyen/trang/ls_o_truyen_v1.webp', h:'Chọn khoá học', t:'Little Seed dành cho bé mới bắt đầu. Canopy dành cho bé đã biết một chút tiếng Anh và tiếng Trung. Con có thể bắt đầu học ngay.'},
   {img:'tai-nguyen/trang/canopy_ban_do.webp', h:'Bản đồ khám phá', t:'Bản đồ có 3 chặng, mỗi chặng 6 buổi. Cả 21 ngày đều mở sẵn; con có thể học theo thứ tự hoặc chọn buổi mình muốn. Cuối mỗi chặng có buổi Zoom với cô giáo.'},
   {img:'tai-nguyen/trang/ls_o_noi_theo.webp', h:'Trong mỗi buổi học', t:'Mỗi bước đều có cô đọc hướng dẫn. Ở cuối màn hình: nút Nghe lại, nút Dừng để tạm nghỉ, nút Câu trước để nghe lại câu vừa rồi. Khi micro đỏ nhấp nháy là máy đang thu giọng con.'},
-  {img:'tai-nguyen/trang/ls_stickers.webp', h:'Sao, Xếp hạng và Góc khám phá', t:'Mỗi bước làm xong con được sao. Mỗi tuần, 5 bạn nhiều sao nhất vào Nhóm vinh danh ở mục Xếp hạng. Góc khám phá có thêm video và trò chơi cho con thích thì xem thêm.'},
+  {img:'tai-nguyen/trang/ls_stickers.webp', h:'Sao và Góc khám phá', t:'Mỗi bước làm xong con được sao để đổi quà. Góc khám phá có thêm video và trò chơi cho con thích thì xem thêm.'},
   {img:'tai-nguyen/trang/ls_man_khen.webp', h:'Gửi ba mẹ', t:'Ba mẹ bật bài cho con đúng giờ, khen con khi con đang làm bài và khi con xong bài. Không ép nói, không sửa lỗi, không so sánh. Xong mỗi buổi, ba mẹ quay một clip ngắn gửi vào nhóm Zalo để nhận thêm điểm.'}
 ];
 function startTour(force){
@@ -1441,7 +1416,7 @@ function viewGroup(g){
       <svg class="wroad" viewBox="0 0 160 90" preserveAspectRatio="none" aria-hidden="true">
         <path d="${road}" class="edge"/><path d="${road}" class="sand"/>${prog?`<path d="${prog}" class="gold"/>`:''}<path d="${road}" class="dash"/></svg>
       ${boards}${zooms}${signs}
-      <a class="wfinal ${n>=LEARN_TOTAL?'on':''}" href="#/g/${g}/vang/0" style="left:${Wd.end[0]}%;top:${Wd.end[1]}%"><span>🏆</span><small>Chung kết</small></a>
+      <div class="wfinal ${n>=LEARN_TOTAL?'on':''}" style="left:${Wd.end[0]}%;top:${Wd.end[1]}%"><span>🏆</span><small>Chung kết</small></div>
       ${nowPos?`<div class="wme" style="left:${nowPos[0]}%;top:${nowPos[1]}%"><img src="${avaSrc()}" alt=""></div>`:''}
       </div>
       <div class="whud">
@@ -1493,8 +1468,6 @@ function xtTeaser(g,r,title){
 }
 function xtWire(){ /* liên kết thường, không cần gắn thêm */ }
 
-
-/* ---------- Bảng vàng / Xếp hạng: xem xep-hang.js ---------- */
 
 /* ---------- MÀN HÌNH 3: một ngày ---------- */
 let cur = {};
@@ -1732,7 +1705,6 @@ function showDone(panel, fresh){
     <div class="ptsum">Buổi này con được <b>${pts} điểm</b> · Chặng này: <b>${roundPoints(g,r)} điểm</b></div>
     <p>Con đã học xong buổi này! ${nx?`Con có thể tiếp tục buổi ${lessonNo(ni)} – chặng ${stageNo(ni)} hoặc chọn buổi khác trên bản đồ.`:'Con đã đi hết bản đồ — sẵn sàng cho Chung kết!'}</p>
     <div class="row">${nx?`<a class="btn" href="#/g/${g}/${ni+1}">Buổi tiếp theo →</a>`:''}
-    ${day.zoom?`<a class="btn" href="#/g/${g}/vang/${r+1}">🏆 Xem Xếp hạng ${esc(ROUNDS[r].vi)}</a>`:''}
     <a class="btn y" href="#/g/${g}">🗺️ Xem bản đồ</a></div></div>
     ${day.zoom?'':missionHTML(g,i)}${day.zoom?'':xtTeaser(g,r,'🧭 Con muốn xem thêm? Góc khám phá')}`;
   missionWire(panel,g,i);
@@ -1923,7 +1895,7 @@ function viewZoom(g,i){
   app.innerHTML=`<div class="wrap">${head(g,i)}
     <div class="panel zoompanel pin">
       <div class="zhead">${art('💻','zart')}<div><div class="zbadge">🎥 Buổi Zoom cùng giáo viên · ${ROUNDS[r].vi}</div>
-      <div class="hint">Tham gia buổi Zoom được +${PTS.zoom} điểm. Buổi Zoom không bắt buộc để mở chặng sau. Mỗi tuần, 5 bạn nhiều sao nhất được vinh danh ở mục Xếp hạng!</div></div></div>
+      <div class="hint">Tham gia buổi Zoom được +${PTS.zoom} điểm. Buổi Zoom không bắt buộc để mở chặng sau.</div></div></div>
       <p class="about">${esc(day.about)}</p>
       ${day.prep&&day.prep.length?`<h3>📝 Con ôn lại trước buổi Zoom</h3><ul class="prep">${day.prep.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}
       <div class="row">${ZOOM_LINK?`<a class="btn" href="${esc(ZOOM_LINK)}" target="_blank" rel="noopener">🎥 Vào phòng Zoom</a>`:''}
@@ -1949,9 +1921,8 @@ function route(){
   const p=location.hash.replace(/^#\/?/,'').split('/').filter(Boolean);
   document.querySelectorAll('.ls-cele').forEach(e=>e.remove());
   document.body.classList.toggle('in-step', p[0]==='g' && p.length>=4 && /^b\d+$/.test(p[3]||''));
-  if(p[0]==='g' && p[1] && p[2]==='vang') viewGold(p[1], +(p[3]||0));
-  else if(p[0]==='xep-hang'){ if(!KID && !TEACHER){ app.innerHTML=''; askProfile('', route); } else viewGold(KID&&GROUPS[KID.group]?KID.group:'seed'); }
-  else if(p[0]==='g' && p[1] && p[2]==='them') viewXemThem(p[1], +(p[3]||1), p[4]&&/^v\d+$/.test(p[4])?+p[4].slice(1):-1);
+  if(p[0]==='g' && p[1] && p[2]==='them') viewXemThem(p[1], +(p[3]||1), p[4]&&/^v\d+$/.test(p[4])?+p[4].slice(1):-1);
+  else if(p[0]==='g' && p[1] && p[2]==='vang') viewGroup(p[1]);
   else if(p[0]==='g' && p[1] && p[2]) viewDay(p[1], +p[2]-1, p[3]);
   else if(p[0]==='g' && p[1]) viewGroup(p[1]);
   else if(p[0]==='qua') viewQua(p[1]);

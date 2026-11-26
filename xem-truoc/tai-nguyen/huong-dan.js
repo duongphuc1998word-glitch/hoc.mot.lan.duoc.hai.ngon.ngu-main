@@ -4,7 +4,6 @@ window.HD_FILES={
 "Cô là cô Hươu. Mỗi ngày con học khoảng 15 phút cùng cô và các bạn Bông, Anna, Leo, Xiaomei. Con nghe, xem, chạm và nói bằng tiếng Anh và tiếng Trung.": "tai-nguyen/huong-dan/hd_001.mp3",
 "Bản đồ có 3 chặng, mỗi chặng 6 buổi. Buổi có màu đỏ đang nhấp nháy là buổi hôm nay. Học xong một buổi thì buổi sau mở khoá. Cuối mỗi chặng có buổi Zoom với cô giáo.": "tai-nguyen/huong-dan/hd_003.mp3",
 "Mỗi bước đều có cô đọc hướng dẫn. Ở cuối màn hình: nút Nghe lại, nút Dừng để tạm nghỉ, nút Câu trước để nghe lại câu vừa rồi. Khi micro đỏ nhấp nháy là máy đang thu giọng con.": "tai-nguyen/huong-dan/hd_004.mp3",
-"Mỗi bước làm xong con được sao. Cuối chặng, Top 10 lên Bảng vàng. Góc khám phá có thêm video và trò chơi cho con thích thì xem thêm.": "tai-nguyen/huong-dan/hd_005.mp3",
 "Ba mẹ bật bài cho con đúng giờ, khen con khi con đang làm bài và khi con xong bài. Không ép nói, không sửa lỗi, không so sánh. Xong mỗi buổi, ba mẹ quay một clip ngắn gửi vào nhóm Zalo để nhận thêm điểm.": "tai-nguyen/huong-dan/hd_006.mp3",
 "Xem và làm theo: con xem video hai lần, bằng tiếng Anh và tiếng Trung, rồi làm động tác giống bạn.": "tai-nguyen/huong-dan/hd_007.mp3",
 "Chạm đúng hình: con nghe cô đọc rồi chạm vào tranh đúng.": "tai-nguyen/huong-dan/hd_008.mp3",

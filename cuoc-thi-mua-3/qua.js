@@ -2,7 +2,7 @@
    PHÒNG ĐỔI QUÀ – ví sao, nuôi thú cưng, nuôi quái vật, avatar, quà thật, học bổng.
    Giá sao và điều kiện theo "Quy chế đổi sao" (bản 22/10/2026) – sửa ở khối Q_ dưới đây.
    Trạng thái lưu trong P._shop, đồng bộ lên máy chủ cùng tiến độ học.
-   Tổng sao đã kiếm (Bảng vàng) không bị trừ khi đổi quà; chỉ "sao trong ví" bị trừ.
+   Sao đã kiếm không bị trừ khi đổi quà; chỉ "sao trong ví" bị trừ.
    ===================================================================== */
 const Q_IMG = '../xem-truoc/tai-nguyen/qua/';
 const Q_RULE = {petAdopt:60, feed:5, play:10, careDay:3, petG:[8,20],
@@ -42,8 +42,7 @@ function shop(){
 }
 function qSave(){ shop().t = Date.now(); save(); }
 function qEarned(){ return myPoints() + qZoomSao(); }
-/* Sao từ Lớp Zoom một màn: cô cộng cuối buổi Zoom (tab "Sao Zoom" trên Sheet), web hỏi máy chủ ?action=zoomsao.
-   Chỉ cộng vào ví (Phòng đổi quà), không cộng vào Xếp hạng. Máy chủ chưa lên v16 thì trả bảng vàng, không có trường sao: coi như 0. */
+/* Sao từ Lớp Zoom một màn: cô cộng cuối buổi Zoom (tab "Sao Zoom" trên Sheet), web hỏi máy chủ ?action=zoomsao. */
 function qZoomSao(){ const z=lsGet('lle3-zoomsao',null); return (z && KID && KID.id && !TEACHER) ? (+z.n||0) : 0; }
 let qZoomT=0;
 async function qZoomPull(){
@@ -386,7 +385,7 @@ function viewOrders(){
       ${s.orders.length?'<button class="btn y sm" id="qRefresh" type="button">🔄 Xem trạng thái mới</button>':''}</div>
     <div class="q-rules"><h4>Quy chế đổi sao (tóm tắt)</h4><ol>
       <li><b>Sao chỉ đến từ việc học.</b> Mỗi buổi làm đủ khoảng 30 ⭐; gửi clip +10, buổi Zoom +20.</li>
-      <li><b>Đổi quà không làm tụt hạng.</b> Bảng vàng tính tổng sao đã kiếm; chỉ sao trong ví bị trừ.</li>
+      <li><b>Đổi quà không làm mất sao đã kiếm.</b> Chỉ sao trong ví bị trừ.</li>
       <li><b>Quà ảo</b> (thú cưng, quái vật, avatar) đổi ngay, không hoàn lại thành sao. Thú cưng không bao giờ ốm hay mất.</li>
       <li><b>Quà thật</b> 120–350 ⭐: mở khi con học xong 6 buổi, tối đa 2 món. <b>Học bổng</b> 350–650 ⭐: theo số buổi đã học, tối đa 1 phiếu.</li>
       <li><b>Ba mẹ xác nhận</b> ở Cổng ba mẹ; CES kiểm tra tiến độ trong 3 ngày làm việc. Phiếu không duyệt được hoàn đủ sao.</li>

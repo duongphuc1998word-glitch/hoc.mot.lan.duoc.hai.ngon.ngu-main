@@ -1605,7 +1605,7 @@ async function rSt(){
     <div class="st-grid">${(ST.blocks||[]).slice().sort((a,b)=>a.so-b.so).map(stCard).join('')}</div></section>
 
   <section class="st-sec" id="stFaq"><h3>Câu hỏi phụ huynh hay gặp</h3><p class="hint">Câu trả lời viết sẵn để chép gửi Zalo. Câu có nhãn vàng cần hỏi Quản lý trước khi trả lời chắc chắn.</p>
-    <div class="st-search"><input id="stQ" type="search" placeholder="Tìm: hoàn phí, micro, Zoom, xếp hạng…" aria-label="Tìm câu hỏi" value="${esc(ST_Q)}"></div>
+    <div class="st-search"><input id="stQ" type="search" placeholder="Tìm: hoàn phí, micro, Zoom, đổi quà…" aria-label="Tìm câu hỏi" value="${esc(ST_Q)}"></div>
     <div class="bar st-chips" style="margin-top:0"><button class="chip ${!ST_B?'on':''}" type="button" data-stb="">Tất cả<span class="c">${(ST.faq||[]).length}</span></button>
       ${(ST.blocks||[]).filter(b=>counts[b.id]).map(b=>`<button class="chip ${ST_B===b.id?'on':''}" type="button" data-stb="${esc(b.id)}">${esc(b.ten)}<span class="c">${counts[b.id]}</span></button>`).join('')}</div>
     <div class="st-faq" id="stFaqList"></div></section>

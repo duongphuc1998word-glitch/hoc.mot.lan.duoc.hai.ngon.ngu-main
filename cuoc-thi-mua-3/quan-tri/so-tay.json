@@ -68,7 +68,7 @@
         "Ghim quy tắc nhóm: không quảng cáo; giữ 3 KHÔNG; chỉ đăng ảnh của con mình; câu hỏi tài khoản, phí nhắn Zalo hỗ trợ.",
         "Thứ Hai: mở vòng mới (chủ đề tuần, câu chuyện tuần, việc ba mẹ cần làm).",
         "Thứ Ba – Thứ Năm: mẹo 1 phút để khen con, kèm 1–2 hành trình nổi bật.",
-        "Thứ Sáu: nhắc Zoom tối Chủ nhật. Thứ Bảy: bảng vàng top 5 tuần.",
+        "Thứ Sáu: nhắc Zoom tối Chủ nhật. Thứ Bảy: tổng kết hoạt động tuần và ghi nhận nỗ lực của cả lớp.",
         "Với mỗi bài chia sẻ hành trình: khen cụ thể, đánh dấu đã ghi nhận trên trang quản trị, xin phép nếu muốn đưa vào bài tổng hợp.",
         "Ghi lại các ba mẹ hay chia sẻ, hay hỏi để mời làm \"phụ huynh dẫn đường\" và mời gọi khảo sát ngắn (block Lắng nghe phụ huynh)."
       ],
@@ -214,7 +214,7 @@
         "Giải thích cấu trúc: 3 vòng (Khám phá – Bứt phá – Chinh phục), mỗi vòng 6 ngày học và 1 buổi Zoom tối Chủ nhật, sau đó là Chung kết tỏa sáng.",
         "Học một lần được hai ngôn ngữ: cùng một câu chuyện, con nghe tiếng Anh rồi tiếng Trung; tiếng Trung chỉ là thêm một cách nói mới.",
         "Học kỹ bài chính trước, rồi mới mở Góc khám phá để học thêm bài cùng chủ đề.",
-        "Con làm bài được sao; sao đổi ở phòng đổi quà theo quy chế đổi sao; ô Xếp hạng tuần ở trang chủ ghi số sao con đạt trong tuần.",
+        "Con làm bài được sao; sao dùng để đổi ở phòng đổi quà theo quy chế đổi sao.",
         "Lỗi kỹ thuật: hướng dẫn ba mẹ tự thử trước, đội kiểm tra trên trang quản trị, rồi mới ghi bảng tester (xem Câu hỏi thường gặp)."
       ],
       "luuY": [
@@ -238,27 +238,27 @@
     {
       "id": "su-kien",
       "so": 5,
-      "ten": "Zoom, xếp hạng & chung kết",
+      "ten": "Zoom & chung kết",
       "icon": "🏆",
       "loai": "diem-cham",
-      "tom": "3 buổi Zoom tối Chủ nhật, vinh danh top 5 tuần, chung kết livestream",
+      "tom": "3 buổi Zoom tối Chủ nhật và chung kết livestream",
       "trangThai": [
         "Đang học 21 ngày"
       ],
       "mucTieu": "Ít nhất 6/10 con đã kích hoạt dự Zoom; mọi gia đình biết lịch trước 2 ngày.",
       "phuTrach": "Giáo viên chuyên môn; bạn trực cộng đồng nhắc lịch",
-      "camKet": "Nhắc Zoom thứ Sáu và 1 giờ trước buổi học · Đăng bảng vàng thứ Bảy",
+      "camKet": "Nhắc Zoom thứ Sáu và 1 giờ trước buổi học",
       "lam": [
         "Thứ Sáu: đăng lịch và link Zoom; nhắc ba mẹ cho con vào sớm 5 phút để thử micro.",
         "Tối Chủ nhật: giáo viên dạy; bạn trực cộng đồng ghi lại khoảnh khắc (chỉ đăng khi ba mẹ đồng ý).",
-        "Thứ Bảy: vinh danh top 5 mỗi tuần; hỏi ba mẹ trước khi nêu tên con.",
+        "Thứ Bảy: tổng kết hoạt động tuần; chỉ chia sẻ hình ảnh hoặc nêu tên bé khi ba mẹ đồng ý.",
         "Chung kết tỏa sáng: vòng 1 từ vựng, vòng 2 câu và nghe, vòng 3 thách đấu phản xạ với giáo viên; livestream trên Facebook.",
-        "Giải chung kết: cúp, cờ và giấy chứng nhận cho top 3 mỗi nhóm, kèm bộ quà (học liệu Anh–Trung của CES, bài đánh giá IQ, vé sự kiện văn hóa)."
+        "Chung kết: khen ngợi nỗ lực của từng bạn, không trao giải theo điểm."
       ],
       "luuY": [
-        "Không so sánh con trước mặt ba mẹ; khen sự chăm chỉ, không chỉ thứ hạng."
+        "Không so sánh con trước mặt ba mẹ; khen sự chăm chỉ và tiến bộ của từng bạn."
       ],
-      "chuyenCap": "Thắc mắc về chấm điểm, thứ hạng → giáo viên chuyên môn, rồi Quản lý.",
+      "chuyenCap": "Thắc mắc về tiến độ hoặc điểm → giáo viên chuyên môn, rồi Quản lý.",
       "tinMau": [],
       "lienKet": [
         {
@@ -517,11 +517,6 @@
     },
     {
       "b": "web-hoc",
-      "h": "Xếp hạng tính thế nào?",
-      "d": "Dạ, ô Xếp hạng tuần ở trang chủ ghi số sao con đạt được trong tuần ạ. Mỗi tuần chương trình vinh danh 5 bạn chăm chỉ nhất trong nhóm cộng đồng."
-    },
-    {
-      "b": "web-hoc",
       "h": "Con có học bằng tiếng Việt không?",
       "d": "Dạ, nội dung học là tiếng Anh và tiếng Trung ạ. Tiếng Việt chỉ dùng trong lời hướng dẫn để con biết cần làm gì."
     },
@@ -564,8 +559,8 @@
     },
     {
       "b": "su-kien",
-      "h": "Giải thưởng gồm những gì?",
-      "d": "Dạ, mỗi tuần vinh danh top 5. Ở chung kết, top 3 mỗi nhóm nhận cúp, cờ, giấy chứng nhận và bộ quà gồm học liệu Anh–Trung của CES, bài đánh giá IQ và vé sự kiện văn hóa ạ."
+      "h": "Chương trình ghi nhận các con thế nào?",
+      "d": "Dạ, chương trình ghi nhận sự tham gia và tiến bộ của từng con. Điểm cá nhân giúp ba mẹ xem lại quá trình học, không dùng để xếp thứ tự hay trao giải theo điểm ạ."
     },
     {
       "b": "sau-thu-thach",

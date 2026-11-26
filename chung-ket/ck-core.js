@@ -1,15 +1,15 @@
-/* Chung kết Rung chuông vàng – phần dùng chung cho màn bé, màn chiếu, bảng xếp hạng (index.html) và màn cô (co.html).
+/* Chung kết Rung chuông vàng – phần dùng chung cho màn bé, màn chiếu (index.html) và màn cô (co.html).
    Dùng lại của Lớp Zoom (lop-zoom/lz-core.js): kết nối Firebase (DB), âm thanh (SND), avatar, chỗ ngồi (buildSeats, answerOf),
    trận Rồng Lửa (bossInfo, lz-boss.js). Luật bảo mật Firebase bản 1 giữ nguyên: dữ liệu nằm trong rooms/<mã>/.
    Phòng chung kết ghi state.lop = 'chung-ket'.
 
    Luật chấm (doc "Chung kết Rung chuông vàng – Khung nội dung câu hỏi", 10/11/2026):
-   - Thi chung Little Seed và Canopy; xếp hạng RIÊNG theo level đăng ký, không xếp lẫn.
+   - Little Seed và Canopy cùng tham gia; level chỉ chọn nội dung câu hỏi.
    - Bé làm đề theo level của mình (Phần 2–4: đề Little Seed hoặc đề Canopy, từ nội dung 3 vòng của level đó); mỗi câu có 3 bậc A/B/C, web tự đưa bậc vừa sức: đúng 2 câu liên tiếp lên một bậc, sai 2 câu liên tiếp xuống một bậc.
      Little Seed bắt đầu bậc A, Canopy bắt đầu bậc B. Bậc chỉ để câu hỏi vừa sức, KHÔNG cộng hay trừ điểm.
-   - Mỗi câu đúng = 1 điểm. Phần 1 không tính xếp hạng (chỉ tích sao). Phần 2: 30%, Phần 3: 30%, Phần 4: 40%.
+   - Mỗi câu đúng = 1 điểm. Phần 1 chỉ tích sao. Phần 2: 30%, Phần 3: 30%, Phần 4: 40%.
    - Phần 2 chia cho 15 câu, Phần 3 (theo giờ) chia cho số câu đúng cao nhất của buổi thi, Phần 4 chia cho 7 điểm.
-   - Bằng điểm: xét điểm Phần 4, rồi thời gian nộp Phần 4. */
+   */
 
 const CK_LOP = 'chung-ket';
 const CK_LV = { seed: 'Little Seed', canopy: 'Canopy' };
@@ -21,7 +21,7 @@ const CK_PH = [
   { id: 'p2', n: 'Phần 2 · Rung chuông vàng', ic: '🔔', m: '15 phút' },
   { id: 'p3', n: 'Phần 3 · Rồng Lửa', ic: '🐉', m: '5 phút' },
   { id: 'p4', n: 'Phần 4 · Ghép tranh chuyển ngữ', ic: '🧩', m: '10 phút' },
-  { id: 'trao', n: 'Trao giải', ic: '🏆', m: '6 phút' }
+  { id: 'trao', n: 'Chúc mừng', ic: '🎉', m: '6 phút' }
 ];
 const CK_P2_SEC = 10;   // thời gian suy nghĩ mỗi câu Rung chuông vàng
 const CK_P2N = 15;      // Phần 2: 15 câu cho mỗi level (đề Little Seed và đề Canopy chạy song song, cùng số câu)
@@ -161,38 +161,20 @@ function ckP4(room, seat) {
   const run = ((room.state || {}).p4 || {}).run || 0;
   const mk = ((room.marks || {})[seat.id] || {}).p4;
   const a = answerOf(room, seat, 'p4_' + run);
-  if (a && a.pts != null) return { pts: a.pts, at: a.at || 0, ho: false };
-  if (mk != null && mk !== '') return { pts: +mk, at: Infinity, ho: true };
-  return { pts: null, at: Infinity };
+  if (a && a.pts != null) return { pts: a.pts };
+  if (mk != null && mk !== '') return { pts: +mk };
+  return { pts: null };
 }
-/* bảng kết quả: mỗi bé một dòng, hạng tính riêng theo level */
+/* Kết quả giữ nguyên thứ tự danh sách người tham gia; level chỉ mô tả nội dung đã làm. */
 function ckResults(room) {
   const seats = buildSeats(room.players).filter(s => s.ok);
   const rows = seats.map(s => {
     const p2 = ckP2(room, s), p3 = ckP3(room, s), p4 = ckP4(room, s);
-    return { seat: s, lv: seatLv(room, s), sao: ckStars(room, s), p2: p2.n, p2done: p2.done, p3: p3.n, p3all: p3.all, p4: p4.pts, p4at: p4.at, band: CK_BANDS[p2Final(room, s)] };
+    return { seat: s, lv: seatLv(room, s), sao: ckStars(room, s), p2: p2.n, p2done: p2.done, p3: p3.n, p3all: p3.all, p4: p4.pts, band: CK_BANDS[p2Final(room, s)] };
   });
   const p3max = Math.max(1, ...rows.map(r => r.p3));
   rows.forEach(r => {
     r.tong = Math.round((30 * r.p2 / CK_P2N + 30 * r.p3 / p3max + 40 * (r.p4 || 0) / 7) * 10) / 10;
   });
-  const out = {};
-  Object.keys(CK_LV).forEach(lv => {
-    const L = rows.filter(r => r.lv === lv).sort((a, b) => (b.tong - a.tong) || ((b.p4 || 0) - (a.p4 || 0)) || (a.p4at - b.p4at) || a.seat.kid.localeCompare(b.seat.kid));
-    L.forEach((r, i) => { r.hang = i + 1; });
-    /* giải: 3 cúp theo hạng; "Phiên dịch nhí" cho bạn có điểm Phần 4 cao nhất ngoài top 3; còn lại là Nhà thám hiểm ngôn ngữ */
-    L.forEach(r => { r.giai = r.hang === 1 ? 'Quán quân' : r.hang === 2 ? 'Á quân' : r.hang === 3 ? 'Hạng 3' : ''; });
-    const pd = L.filter(r => !r.giai && r.p4).sort((a, b) => (b.p4 - a.p4) || (a.p4at - b.p4at))[0];
-    if (pd) pd.giai = 'Phiên dịch nhí';
-    L.forEach(r => { if (!r.giai) r.giai = 'Nhà thám hiểm ngôn ngữ'; });
-    out[lv] = L;
-  });
-  return { rows, by: out, p3max };
-}
-const CK_CUP = { 'Quán quân': '🏆', 'Á quân': '🥈', 'Hạng 3': '🥉', 'Phiên dịch nhí': '🗣️', 'Nhà thám hiểm ngôn ngữ': '🧭' };
-
-/* bảng top 5 của một level (màn chiếu, cửa sổ bảng xếp hạng cho livestream) */
-function ckBoardHTML(res, lv, n) {
-  const L = res.by[lv].slice(0, n || 5);
-  return `<div class="bd-col"><h3>${CK_LV[lv]}</h3>${L.length ? L.map(r => `<div class="bd-row r${r.hang}"><b class="bd-n">${r.hang}</b><img src="${faceOf(r.seat)}" alt=""><span class="bd-nm">${esc(r.seat.kid)}</span><b class="bd-pt">${r.tong}</b></div>`).join('') : '<p class="small">Chưa có bạn nào.</p>'}</div>`;
+  return { rows, p3max };
 }

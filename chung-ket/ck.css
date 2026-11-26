@@ -59,22 +59,12 @@
 .chieu .ck-ongba img{width:min(24vw,36vh)}
 .chieu .ck-lines.big{font-size:52px}
 
-/* bảng xếp hạng */
-.ck-board{display:grid;grid-template-columns:1fr 1fr;gap:18px;width:min(96vw,1100px);margin:0 auto}
-.bd-col{background:#fff;border-radius:22px;border:3px solid var(--line);padding:14px 16px;box-shadow:var(--shadow)}
-.bd-col h3{margin:0 0 8px;font-size:28px;color:var(--red-dark);text-align:center}
-.bd-row{display:flex;align-items:center;gap:10px;padding:6px 8px;border-radius:14px;margin:4px 0;background:var(--cream);transition:transform .4s}
-.bd-row img{width:48px;height:48px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 0 0 2px var(--line)}
-.bd-n{width:36px;height:36px;border-radius:50%;background:var(--line);display:grid;place-items:center;font-size:20px;flex:none}
-.bd-row.r1 .bd-n{background:#FFC72C}.bd-row.r2 .bd-n{background:#D9DEE5}.bd-row.r3 .bd-n{background:#F2B07A}
-.bd-row.r1{background:var(--yellow-soft)}
-.bd-nm{flex:1;font-size:22px;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.bd-pt{font-size:24px;color:var(--red-dark)}
-.bd-ov{position:fixed;inset:52px 0 0 0;z-index:40;background:rgba(255,251,240,.96);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;animation:fadeIn .3s}
-.bd-ov h2{margin:0;font-size:40px}
-body.bang{background:var(--cream)}
-.ck-board.bang{margin-top:20px}
-.ck-board.bang .bd-nm{font-size:28px}.ck-board.bang .bd-row img{width:60px;height:60px}
+/* Chúc mừng cả lớp, theo thứ tự người tham gia */
+.ck-celebration{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;width:min(96vw,1200px);max-height:68vh;overflow:auto;margin:18px auto;padding:4px}
+.ck-celebrant{display:flex;align-items:center;gap:10px;min-width:0;background:#fff;border:3px solid var(--line);border-radius:18px;padding:8px 12px;box-shadow:var(--shadow)}
+.ck-celebrant img{width:48px;height:48px;flex:none;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 0 0 2px var(--line)}
+.ck-celebrant b{min-width:0;overflow-wrap:anywhere}
+.ck-celebrant span{margin-left:auto;color:var(--muted);font-weight:700;white-space:nowrap}
 
 /* màn bé: giải của con */
 .ck-award{display:flex;flex-direction:column;align-items:center;gap:6px}
@@ -89,21 +79,16 @@ body.bang{background:var(--cream)}
 .opt-t.ok,.bigtxt.ok{border-color:var(--green);background:#DDF6E5}
 .co table.res td .flag{font-size:11px;padding:0 6px}
 .co .ctl input,.co .ctl select{padding:6px 10px;border:2px solid var(--line);border-radius:10px}
-.co .ck-board{grid-template-columns:1fr}
-.co .bd-nm{font-size:16px}.co .bd-row img{width:34px;height:34px}.co .bd-col h3{font-size:20px}
-
 @media (max-width:640px){
   .ck-word{font-size:40px}
   .pick.ck-txt{font-size:18px;min-height:84px}
   .pick.ck-say{min-height:96px}
   .xep-grid.ck-xg{grid-template-columns:repeat(2,1fr)}
-  .ck-board{grid-template-columns:1fr}
 }
 /* màn chiếu Phần 4: 6–7 thẻ vừa một màn */
 .chieu .xep-grid.ck-xg .xep-t img{max-height:24vh}
 .chieu .xep-grid.ck-xg.rv .xep-t img{max-height:21vh}
 .chieu .xep-grid.ck-xg.rv .xep-t span{font-size:21px}.chieu .xep-grid.ck-xg.rv .xep-t small{font-size:16px}
-.co .ck-board{width:100%}
 /* hai level song song trên màn chiếu, thẻ level, bậc thang Từ → Cụm từ → Câu */
 .ck-cols{display:grid;grid-template-columns:1fr 1fr;gap:18px;width:min(96vw,1200px);align-items:start}
 .ck-col{display:flex;flex-direction:column;align-items:center;gap:10px}

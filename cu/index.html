@@ -283,9 +283,6 @@ a.btn,a.gcard,a.lnk{text-decoration:none}
 .stop.done .dot{animation:shine 3s ease-in-out infinite}
 @keyframes shine{0%,100%{filter:brightness(1)}50%{filter:brightness(1.12)}}
 .rpts{margin-left:auto;background:var(--yellow-soft);border:2px solid var(--yellow);border-radius:999px;padding:2px 10px;font-weight:800;font-size:15px}
-.gold{display:block;text-align:center;margin-top:14px;padding:8px;border-radius:14px;border:2px dashed #E8D6A8;color:var(--muted);font-weight:800;text-decoration:none}
-.gold.on{background:linear-gradient(90deg,#FFE27A,#FFC72C,#FFE27A);background-size:200% 100%;border:2px solid #F2A900;color:var(--ink);animation:sheen 2.5s linear infinite}
-@keyframes sheen{to{background-position:-200% 0}}
 .rdone{border-color:var(--yellow)}
 .final .trophy{animation:bob 2.4s ease-in-out infinite}
 
@@ -352,23 +349,6 @@ a.gtab{text-decoration:none}
 .modal .small{font-size:13px;text-align:left;margin:0}
 .mart .art{animation:spin 6s linear infinite}
 
-/* ===== bảng vàng ===== */
-.goldhead{display:flex;gap:12px;align-items:center;margin:18px 0 10px}
-.goldhead h2{margin:0;font-size:28px}.goldhead small{color:var(--muted);font-weight:700}
-.goldhead .art{animation:bob 2.4s infinite}
-.podium{display:flex;justify-content:center;align-items:flex-end;gap:10px;margin:10px 0 18px}
-.pod{flex:1;max-width:150px;text-align:center;animation:rise .6s var(--d,0s) both}
-.pn{font-weight:800;font-size:17px;line-height:1.1;margin-top:4px;word-break:break-word}
-.pp{color:var(--muted);font-weight:700;font-size:14px}
-.pb{margin-top:6px;border-radius:14px 14px 0 0;color:#fff;font-weight:800;font-size:28px;display:grid;place-items:center}
-.p1 .pb{height:110px;background:linear-gradient(#FFD34D,#F2A900)}
-.p2 .pb{height:80px;background:linear-gradient(#D9DEE5,#A8B1BD)}
-.p3 .pb{height:60px;background:linear-gradient(#F0B98A,#C9814A)}
-.p1 .pm .art{animation:bob 2s infinite}
-.ranks{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
-.ranks li{display:flex;align-items:center;gap:10px;background:var(--cream);border-radius:14px;padding:8px 12px;animation:rise .4s var(--d,0s) both}
-.rn{width:30px;height:30px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-weight:800;flex:none}
-.nm{flex:1;font-weight:800;min-width:0;overflow-wrap:anywhere}.pt{font-weight:800;color:var(--red);font-variant-numeric:tabular-nums}
 .loading{text-align:center;color:var(--muted)}
 
 .newtab{opacity:.6}
@@ -447,7 +427,7 @@ a.gtab{text-decoration:none}
    ===================================================================== */
 const ZALO_LINK = "https://zalo.me/g/atdjpv272";
 const ZOOM_LINK = "";   // dán link Zoom vào đây; để trống thì web nhắc xem link trong nhóm Zalo
-const SCORE_API = "";   // dán link Web App của Apps Script (bảng điểm) vào đây để bật Bảng vàng Top 10
+const SCORE_API = "";   // dán link Web App của Apps Script để đồng bộ tiến độ và điểm
 const IMG_DIR = "img/";   // thư mục ảnh minh hoạ (.jpg, tên theo từ tiếng Anh). Để "" nếu chưa có ảnh.
 
 const W=(img,en,zh,py,vi)=>({img,en,zh,py,vi});
@@ -1216,7 +1196,7 @@ function askProfile(g, then){
   ov.innerHTML=`<form class="modal" id="pf">
     <div class="mart"><img class="mportrait" src="img/characters/bong.jpg" alt=""></div>
     <h3>Nhà thám hiểm tên là gì?</h3>
-    <p class="hint">Tên này hiện trên Bảng vàng khi con lọt Top 10. Bố mẹ có thể dùng tên ở nhà của con.</p>
+    <p class="hint">Tên này hiện trong hồ sơ học của con. Bố mẹ có thể dùng tên ở nhà của con.</p>
     <label for="kname">Tên của con</label>
     <input id="kname" required maxlength="24" placeholder="Ví dụ: Bông, Minh An" value="${esc(KID&&KID.name||'')}">
     <label for="kcode">4 số cuối điện thoại bố/mẹ</label>
@@ -1243,7 +1223,7 @@ function viewHome(){
     <div class="kicker">Thử thách 21 ngày Bật phản xạ Anh – Trung</div>
     <h1>Những nhà thám hiểm<br>ngôn ngữ nhí</h1>
     <span class="tag">Giỏi tiếng Anh – Siêu tiếng Trung</span>
-    <p>Chọn nhóm của con để bắt đầu hành trình 21 ngày: 3 vòng, mỗi vòng 6 ngày tự học và 1 buổi Zoom cùng giáo viên. Tích điểm mỗi ngày để vào Bảng vàng Top 10!</p>
+    <p>Chọn nhóm của con để bắt đầu hành trình 21 ngày: 3 vòng, mỗi vòng 6 ngày tự học và 1 buổi Zoom cùng giáo viên. Tích điểm mỗi ngày để theo dõi tiến độ học tập của mình!</p>
     <div class="crew" aria-label="Các bạn đồng hành">
       <figure class="mate" style="--d:.15s"><img src="img/characters/leo.jpg" alt="Leo"><figcaption><b>Leo</b><span>Hello!</span></figcaption></figure>
       <figure class="mate main" style="--d:0s"><img src="img/characters/bong.jpg" alt="Bông"><figcaption><b>Bông</b><span>Xin chào!</span></figcaption></figure>
@@ -1266,7 +1246,7 @@ function viewHome(){
     </div>
     <div class="note">
       <b>Gửi bố mẹ:</b> mỗi ngày con học khoảng 10–15 phút cùng bố mẹ: nghe từ và mẫu câu → làm hoạt động → chơi trò chơi → hoàn thành.
-      Ngày 7, 14, 21 là <b>buổi Zoom cùng giáo viên</b>. Mỗi bước hoàn thành được cộng điểm; cuối mỗi vòng, Top 10 mỗi nhóm được vinh danh trên Bảng vàng.
+      Ngày 7, 14, 21 là <b>buổi Zoom cùng giáo viên</b>. Mỗi bước hoàn thành được cộng điểm để con theo dõi tiến bộ của mình.
       <br><br>Nhớ nguyên tắc <b>3 KHÔNG</b>: không ép nói · không sửa lỗi · không so sánh. 💛
     </div>
     <div class="ptable"><b>Cách tính điểm mỗi ngày:</b>
@@ -1298,7 +1278,6 @@ function viewGroup(g){
           return `<button class="stop ${cls}" data-i="${i}" style="--d:${d*.05}s"><span class="dot">${icon}</span><span class="lb">${day.zoom?'Zoom':'Ngày '+(i+1)}</span></button>`;
         }).join('')}
       </div>
-      <a class="gold ${rdone?'on':''}" href="#/g/${g}/vang/${r+1}">🏆 Bảng vàng ${R.vi}</a>
     </div>`;}).join('');
   app.innerHTML = `<div class="wrap">
     <div class="ghead">
@@ -1313,7 +1292,6 @@ function viewGroup(g){
       <div class="trophy">${art('🏆','big')}</div>
       <h3>The Grand Finale – Chung kết tỏa sáng</h3>
       <div>${n<TOTAL ? 'Hoàn thành đủ 21 ngày để sẵn sàng cho Chung kết livestream!' : 'Con đã sẵn sàng cho Chung kết! Theo dõi lịch thi trên nhóm Zalo nhé.'}</div>
-      <a class="btn y" href="#/g/${g}/vang/0" style="margin-top:12px">🏆 Bảng vàng tổng 21 ngày</a>
     </div>
     <div class="row"><a class="btn y" href="#/">← Đổi nhóm</a></div>
   </div>`;
@@ -1322,41 +1300,6 @@ function viewGroup(g){
     sfx.pop(); location.hash = `#/g/${g}/${+b.dataset.i+1}`;
   });
   mascot('hi');
-}
-
-/* ---------- Bảng vàng ---------- */
-function viewGold(g, r){
-  const G=GROUPS[g]; if(!G) return viewHome();
-  const tabs=[[1,ROUNDS[0].vi],[2,ROUNDS[1].vi],[3,ROUNDS[2].vi],[0,'Tổng 21 ngày']];
-  const mine = r? roundPoints(g,r-1) : groupPoints(g);
-  app.innerHTML=`<div class="wrap">
-    <div class="goldhead">${art('🏆','big')}<div><h2>Bảng vàng ${esc(G.name)}</h2><small>Top 10 nhà thám hiểm nhiều điểm nhất</small></div></div>
-    <div class="gtabs">${tabs.map(([k,t])=>`<a class="gtab ${k===r?'on':''}" href="#/g/${g}/vang/${k}">${t}</a>`).join('')}</div>
-    <div class="panel" id="board"><div class="loading">${art('🧭','big spin')}<p>Đang tải Bảng vàng…</p></div></div>
-    ${KID?`<div class="mycard">${art('🧒','sm')}<span><b>${esc(KID.name)}</b> có <b>${mine} điểm</b> ${r?'trong '+esc(ROUNDS[r-1].vi):'sau 21 ngày'}</span><span id="myrank"></span></div>`:''}
-    <div class="row"><a class="btn y" href="#/g/${g}">← Về bản đồ</a></div></div>`;
-  const board=document.getElementById('board');
-  if(!SCORE_API){
-    board.innerHTML=`<div class="empty">${art('🏗️','big')}<h3>Bảng vàng đang được chuẩn bị</h3><p>Khi cô giáo kết nối bảng điểm, Top 10 của nhóm ${esc(G.name)} sẽ hiện ở đây.</p></div>`;
-    return;
-  }
-  fetch(`${SCORE_API}?group=${encodeURIComponent(g)}&round=${r}&kid=${encodeURIComponent(kidId())}`)
-    .then(res=>res.json()).then(data=>{
-      const top=(data&&data.top)||[];
-      if(!top.length){ board.innerHTML=`<div class="empty">${art('🌱','big')}<h3>Chưa có ai trên Bảng vàng</h3><p>Hoàn thành bài học để là người đầu tiên!</p></div>`; return; }
-      const medal=['🥇','🥈','🥉'];
-      const pod=top.slice(0,3), rest=top.slice(3,10);
-      const order=[1,0,2].filter(k=>pod[k]);
-      board.innerHTML=`<div class="podium">${order.map(k=>`
-          <div class="pod p${k+1}" style="--d:${(2-k)*.25}s"><div class="pm">${art(medal[k].replace(/./u,m=>m),'pmed')}</div>
-          <div class="pn">${esc(pod[k].name)}</div><div class="pp">${pod[k].points} điểm</div><div class="pb">${k+1}</div></div>`).join('')}</div>
-        ${rest.length?`<ol class="ranks" start="4">${rest.map((x,k)=>`<li style="--d:${.8+k*.08}s"><span class="rn">${k+4}</span><span class="nm">${esc(x.name)}</span><span class="pt">${x.points} điểm</span></li>`).join('')}</ol>`:''}`;
-      const mr=document.getElementById('myrank');
-      if(mr && data.me && data.me.rank) mr.innerHTML=` · Hạng <b>${data.me.rank}</b>${data.me.rank<=10?' 🎉':''}`;
-      sfx.win(); confetti(24);
-    }).catch(()=>{
-      board.innerHTML=`<div class="empty">${art('📡','big')}<h3>Chưa tải được Bảng vàng</h3><p>Kiểm tra kết nối mạng rồi thử lại nhé.</p><button class="btn y" onclick="route()">Thử lại</button></div>`;
-    });
 }
 
 /* ---------- MÀN HÌNH 3: một ngày ---------- */
@@ -1591,7 +1534,6 @@ function showDone(panel, fresh){
     <div class="ptsum">Hôm nay con được <b>${pts} điểm</b> · Vòng này: <b>${roundPoints(g,r)} điểm</b></div>
     <p>Nhà thám hiểm nhí giỏi quá! ${nx?`Ngày ${i+2}${nx.zoom?' (buổi Zoom cùng giáo viên)':''} đã được mở khóa.`:'Con đã đi hết 21 ngày — sẵn sàng cho Chung kết!'}</p>
     <div class="row">${nx?`<a class="btn" href="#/g/${g}/${i+2}">Ngày ${i+2} →</a>`:''}
-    ${day.zoom?`<a class="btn" href="#/g/${g}/vang/${r+1}">🏆 Xem Bảng vàng ${esc(ROUNDS[r].vi)}</a>`:''}
     <a class="btn y" href="#/g/${g}">🗺️ Xem bản đồ</a></div></div>`;
   if(fresh){ confetti(44); sfx.win(); mascot('done'); }
 }
@@ -1602,7 +1544,7 @@ function viewZoom(g,i){
   app.innerHTML=`<div class="wrap">${head(g,i)}
     <div class="panel zoompanel pin">
       <div class="zhead">${art('💻','zart')}<div><div class="zbadge">🎥 Buổi Zoom cùng giáo viên · ${ROUNDS[r].vi}</div>
-      <div class="hint">Tham gia buổi Zoom được +${PTS.zoom} điểm. Kết thúc vòng này, Top 10 được vinh danh trên Bảng vàng!</div></div></div>
+      <div class="hint">Tham gia buổi Zoom được +${PTS.zoom} điểm. Buổi Zoom không bắt buộc để mở chặng sau.</div></div></div>
       <p class="about">${esc(day.about)}</p>
       ${day.prep&&day.prep.length?`<h3>📝 Con ôn lại trước buổi Zoom</h3><ul class="prep">${day.prep.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}
       <div class="row">${ZOOM_LINK?`<a class="btn" href="${esc(ZOOM_LINK)}" target="_blank" rel="noopener">🎥 Vào phòng Zoom</a>`:''}
@@ -1622,7 +1564,7 @@ function viewZoom(g,i){
 function route(){
   try{ speechSynthesis.cancel(); }catch(e){}
   const p=location.hash.replace(/^#\/?/,'').split('/').filter(Boolean);
-  if(p[0]==='g' && p[1] && p[2]==='vang') viewGold(p[1], +(p[3]||0));
+  if(p[0]==='g' && p[1] && p[2]==='vang') viewGroup(p[1]);
   else if(p[0]==='g' && p[1] && p[2]) viewDay(p[1], +p[2]-1);
   else if(p[0]==='g' && p[1]) viewGroup(p[1]);
   else viewHome();

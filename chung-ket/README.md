@@ -10,17 +10,15 @@ Nội dung theo doc "Chung kết Rung chuông vàng – Khung nội dung câu h�
 | Ba mẹ / bé | ../chung-ket |
 | Màn điều khiển của cô (máy tính) | …/chung-ket/co.html |
 | Màn trình chiếu (cô chia sẻ lên Zoom) | …/chung-ket/chieu.html (tự điền mã phòng cô vừa mở trên máy đó), hoặc nút **🖥 Chia sẻ lên Zoom** trên màn cô |
-| Bảng xếp hạng cho livestream (OBS) | …/chung-ket/?bang=MÃ — top 5 mỗi level, tự cập nhật |
 | Trang luyện host (câu dẫn Anh – Trung, chấm AI, kiểm tra tình huống) | …/chung-ket/host/ · kết quả cho chị: …/chung-ket/host/?ket-qua (xem `host/README.md`) |
 | Thử trên một máy, không cần Firebase | thêm `?mock=1` vào link cô và link bé, mở nhiều tab cùng trình duyệt |
 
 Bé nhập mã phòng ở link Lớp Zoom cũng được: web tự chuyển sang trang chung kết.
 
 ## Luật
-- Little Seed và Canopy thi chung một phòng; **xếp hạng riêng theo level đăng ký**.
+- Little Seed và Canopy cùng tham gia một phòng; level chỉ dùng để chọn nội dung phù hợp.
 - Mỗi câu 3 bậc (A nghe – chạm tranh; B nghe một tiếng – chọn lời tiếng kia; C đọc chữ). Little Seed bắt đầu A, Canopy bắt đầu B; đúng 2 câu liên tiếp lên bậc, sai 2 câu liên tiếp xuống bậc. Bậc chỉ để vừa sức, **mỗi câu đúng 1 điểm ở mọi bậc**.
-- Tổng điểm = Phần 2 (30%, chia 15) + Phần 3 (30%, chia số câu đúng cao nhất buổi thi) + Phần 4 (40%, chia 7). Phần 1 chỉ tích sao. Bằng điểm: xét Phần 4, rồi thời gian nộp Phần 4.
-- Giải mỗi level: Quán quân, Á quân, Hạng 3; Phiên dịch nhí (điểm Phần 4 cao nhất ngoài top 3); còn lại Nhà thám hiểm ngôn ngữ.
+- Tổng điểm cá nhân = Phần 2 (30%, chia 15) + Phần 3 (30%, chia số câu đúng cao nhất buổi thi) + Phần 4 (40%, chia 7). Phần 1 chỉ tích sao. Điểm dùng để xem lại tiến độ cá nhân, không dùng để xếp hạng hay trao giải theo thứ tự.
 - 3 KHÔNG: máy bé không báo sai, màn chiếu chỉ hiện đáp án chung và số bạn đã chọn, Rồng Lửa không hiện điểm từng bạn.
 
 ## Âm thanh
@@ -36,12 +34,12 @@ Lời cô Hươu mới (`CK_LOI` trong `ck-core.js`) đang tạm đọc bằng g
 
 ## Tệp
 - `tao-du-lieu.js` → sinh `ck-data.js` từ `xem-truoc/ls-data.js` (tranh, giọng có sẵn của web học). Sửa câu hỏi ở đây rồi chạy `node chung-ket/tao-du-lieu.js`.
-- `ck-core.js` – luật bậc, câu Rồng Lửa, tính điểm, xếp hạng.
-- `ck-con.js` – màn bé, màn chiếu, bảng xếp hạng. `ck-co.js` – màn cô. `ck.css`.
+- `ck-core.js` – luật bậc, câu Rồng Lửa và tính điểm cá nhân.
+- `ck-con.js` – màn bé và màn chiếu. `ck-co.js` – màn cô. `ck.css`.
 - Dùng lại của `lop-zoom/`: `lz-core.js` (Firebase, âm thanh, chỗ ngồi), `lz-boss.js` (trận Rồng Lửa), `lz.css`, `co.css`, `vendor/`.
 
 ## Dữ liệu Firebase (`rooms/<mã>/`)
-- `state`: `lop:'chung-ket'`, `ph` (cho, p1, p2, p3, p4, trao), `i`, `step`, `t0`, `boss {run,t0,dur,end}`, `p4 {run,step,sc}`, `bang`.
+- `state`: `lop:'chung-ket'`, `ph` (cho, p1, p2, p3, p4, trao), `i`, `step`, `t0`, `boss {run,t0,dur,end}`, `p4 {run,step,sc}`.
 - `players/<máy>`: `kid, parent, ava, lv (seed|canopy), on`.
 - `answers/p1_<i>`, `p2_<i>` (`c, ok, b`), `boss_<lượt>_<n>` (`ok, b, k, l`), `p4_<lượt>` (`order, pts, b`).
 - `marks/<chỗ>/`: `px` (cô bấm hộ Phần 2), `bx` (⚡ +1 Phần 3), `p4` (điểm xếp tranh bé 1 máy), `lv` (cô đổi level).

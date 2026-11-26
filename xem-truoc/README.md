@@ -5,12 +5,12 @@ Web tự học cho Thử thách 21 ngày Bật phản xạ Anh – Trung (CES Vi
 
 ## Trạng thái hiện tại
 - Không cần đăng ký hay cung cấp số điện thoại; tên bé chỉ dùng để lưu tiến độ trên máy.
-- Toàn bộ 21 ngày và các tính năng học, xếp hạng, đổi quà đều khả dụng.
+- Toàn bộ 21 ngày và các tính năng học, tích sao, đổi quà đều khả dụng.
 - Trên iPhone/iPad, chọn **Chia sẻ → Thêm vào Màn hình chính** để mở như ứng dụng toàn màn hình.
 - Các mục "Cập nhật" bên dưới là nhật ký các phiên bản cũ; mô tả đăng ký/học thử trong đó không còn áp dụng.
 
 ## Cấu trúc
-- `index.html` – khung web: trang chủ, bản đồ, điểm, Bảng vàng, ngày Zoom
+- `index.html` – khung web: trang chủ, bản đồ, điểm, ngày Zoom
 - `ls-data.js`, `ls.js`, `ls.css` – Little Seed: 18 ngày, 6 dạng bài (Xem và làm theo, Chạm đúng hình, Nói theo, Anh hay Trung?, Đố con, Nhìn chữ)
 - `canopy-data.js`, `canopy.js`, `canopy-games.js`, `canopy-speak.js`, `canopy.css` – Canopy: 18 ngày, 13 dạng bài
 - `xem-them.js` – Góc khám phá thêm (video, game chơi cùng ba mẹ) của từng vòng
@@ -21,15 +21,15 @@ Web tự học cho Thử thách 21 ngày Bật phản xạ Anh – Trung (CES Vi
 ## Sửa nội dung
 - Little Seed: dữ liệu được sinh tự động từ Google Doc "Little Language Explorers – Thiết kế chuyên môn 21 ngày" và `tai-nguyen/*_manifest.json`.
 - Canopy: theo Google Doc "Canopy – Logic bài tập tự học 3 vòng × 6 ngày" (bản 20/10/2026).
-- Trong `index.html`: `ZALO_LINK`, `ZOOM_LINK`, `SCORE_API` (Bảng vàng Top 10).
+- Trong `index.html`: `ZALO_LINK`, `ZOOM_LINK`, `SCORE_API` (đồng bộ tiến độ và điểm).
 
 ## Chế độ giáo viên
 Thêm `?gv=1` vào cuối link, hoặc bấm "Chế độ giáo viên" ở cuối trang chủ, để mở tất cả các ngày mà không cần nhập tên.
-Tiến độ ở chế độ giáo viên lưu riêng (`lle-progress-gv`), không cộng vào điểm và ngày của bé trên cùng máy, và không gửi lên Bảng vàng.
+Tiến độ ở chế độ giáo viên lưu riêng (`lle-progress-gv`), không cộng vào điểm và ngày của bé trên cùng máy.
 
 ## Cập nhật 21/10/2026 (sửa theo báo cáo của team tester)
 - **Âm thanh**: cắt tiếng "rẹt" ở cuối 68 file giọng đọc (Little Seed 23, Canopy 45); dựng lại file 去公园 (chữ 园 bị đọc hỏng). Truyện Canopy đọc từ một bản thu liền cả truyện (`tai-nguyen/canopy-story-times.js`) nên giọng đều từ đầu đến cuối.
-- **Đăng nhập không mật khẩu**: tên con + SĐT hoặc Gmail của bố mẹ. Để học tiếp trên máy khác, cần bật máy chủ Apps Script: làm theo hướng dẫn ở đầu file `apps-script/Code.gs`, rồi dán link vào `SCORE_API` trong `index.html` (cùng link này bật luôn Bảng vàng). Chưa có link thì tiến độ vẫn lưu trên máy đang dùng.
+- **Đăng nhập không mật khẩu**: tên con + SĐT hoặc Gmail của bố mẹ. Để học tiếp trên máy khác, cần bật máy chủ Apps Script: làm theo hướng dẫn ở đầu file `apps-script/Code.gs`, rồi dán link vào `SCORE_API` trong `index.html`. Chưa có link thì tiến độ vẫn lưu trên máy đang dùng.
 - **Màn "Chạm để bắt đầu"** khi mở web (mở khoá âm thanh) và **hướng dẫn lần đầu** có giọng đọc (nút "Xem hướng dẫn" ở trang chủ để xem lại).
 - **Bản đồ khám phá mới**: 3 chặng nối liền, mỗi chặng 6 buổi trên đường uốn lượn, có tên và mô tả chủ đề; buổi Zoom ở cuối chặng, không chặn buổi sau.
 - **Góc khám phá**: 2 video gợi ý ngay trên bản đồ và sau khi học xong buổi.
@@ -56,7 +56,7 @@ Tiến độ ở chế độ giáo viên lưu riêng (`lle-progress-gv`), không
 - **Trang quản trị** (Việc hôm nay · Gia đình · Số liệu) là dự án Apps Script riêng trong `apps-script/quan-tri/`, đăng nhập Google. Cách bật: `apps-script/quan-tri/HUONG-DAN.md`.
 
 ## Cập nhật 23/10/2026 (gộp về một Sheet)
-- Mọi dữ liệu (tiến độ, Bảng vàng, đổi quà, sự kiện học thử, Gia đình, đơn đăng ký trang ưu đãi, trang quản trị) nay nằm trong Sheet "Little Language Explorer – Tiến độ & Bảng vàng". Sheet DATA Dự án không còn nhận dữ liệu mới; Sheet mới bắt đầu trống.
+- Mọi dữ liệu (tiến độ, điểm, đổi quà, sự kiện học thử, Gia đình, đơn đăng ký trang ưu đãi, trang quản trị) nay nằm trong Sheet "Little Language Explorer – Tiến độ & Bảng vàng". Sheet DATA Dự án không còn nhận dữ liệu mới; Sheet mới bắt đầu trống.
 - Máy chủ `apps-script/Code.gs` nhận thêm form trang ưu đãi (tab "Đăng ký Web", cùng thứ tự cột như cũ, thêm cột Q "Mã gia đình"); `?action=ping` trả `v:3`.
 - Trang ưu đãi (kho Ceseducation) cần đổi `SHEET_ENDPOINT` sang link /exec của máy chủ này; xem `apps-script/quan-tri/HUONG-DAN.md`, bước 3.
 

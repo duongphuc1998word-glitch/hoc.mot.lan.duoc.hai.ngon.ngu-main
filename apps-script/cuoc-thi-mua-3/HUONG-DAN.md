@@ -35,7 +35,7 @@ Gửi link `/exec` cho Claude để dán và đẩy lên GitHub, hoặc tự s�
 ## 5. Ngày và phí mùa 3 (đã điền 20/11/2026)
 - Bắt đầu thứ Hai 30/11/2026, **không có hạn đăng ký**, phí **159.000đ**.
 - Tab **Cài đặt quản trị** của Sheet mùa 3 tự tạo với các giá trị này ở lần chạy đầu; muốn đổi thì sửa ngay trong tab.
-- Web: `DEMO_FEE`, `DEMO_KHAI_MAC` (`cuoc-thi-mua-3/index.html`), `XH_START` (`cuoc-thi-mua-3/xep-hang.js`).
+- Web: `DEMO_FEE`, `DEMO_KHAI_MAC` (`cuoc-thi-mua-3/index.html`).
 
 ## Cập nhật máy chủ sau này
 Sửa `Code.gs`/`QuanTri.gs` trong thư mục này → dán vào dự án "Cuộc thi mùa 3 – Máy chủ" (nhớ giữ `DATA_ID` của mùa 3) → **Triển khai → Quản lý các bản triển khai** → bút chì → **Phiên bản mới** → Triển khai. Link `/exec` giữ nguyên.

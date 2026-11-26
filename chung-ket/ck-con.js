@@ -1,8 +1,7 @@
-/* Chung kết Rung chuông vàng – màn bé (link chung), màn chiếu (?chieu=MÃ) và bảng xếp hạng cho livestream (?bang=MÃ).
+/* Chung kết Rung chuông vàng – màn bé (link chung) và màn chiếu (?chieu=MÃ).
    Âm thanh: Phần 1 và lời cô Hươu phát ở màn chiếu (qua Zoom). Phần 2, 3, 4 mỗi bé nghe câu hỏi trên máy mình
    (câu hỏi theo bậc của từng bé), nên cô tắt tiếng tất cả trên Zoom khi các con làm bài. */
 const CHIEU = QS.get('chieu') || '';
-const BANG = QS.get('bang') || '';
 const app = $('#app');
 const HUOU = TN + 'nhan-vat/huou_huou1_a.webp';
 let muted = CHIEU ? !!lsGet('ck-chieu-mute', false) : false;
@@ -140,7 +139,6 @@ function render() {
   }
   if (v.akey && v.akey !== audioKey) { audioKey = v.akey; if (v.audio) v.audio(); }
   if (v.update) v.update();
-  overlayBoard(st);
 }
 /* gộp các thay đổi dồn dập (40 bé cùng trả lời) thành tối đa khoảng 6 lần vẽ mỗi giây */
 let rsT = null, rsAt = 0;
@@ -225,7 +223,7 @@ function bindOpts(opts, onPick) {
 }
 
 /* --- Phần 1: cả lớp làm chung, xen kẽ một câu Little Seed rồi một câu Canopy; đi Vòng 1 → 3, mỗi vòng Từ → Cụm từ → Câu.
-   Câu nào cũng: nghe (màn chiếu phát) rồi chạm 1 trong 3 tranh. Không tính xếp hạng, đúng được sao. --- */
+   Câu nào cũng: nghe (màn chiếu phát) rồi chạm 1 trong 3 tranh. Không so sánh điểm, đúng được sao. --- */
 function p1Head(q, i) {
   const lvIc = q.lv === 'canopy' ? '🌳' : '🌱';
   return `<div class="qno">${lvIc} Phần 1 · Ôn tập · Câu ${i + 1}/${CK_P1.length}</div>
@@ -518,29 +516,20 @@ async function p4Listen(lv, l, times) {
   const h = $('#p4h'); if (h && tok === playTok) h.textContent = '✅ Con nghe xong rồi! Chờ cô nhé.';
 }
 
-/* --- Trao giải --- */
+/* --- Chúc mừng cả lớp --- */
 function vTrao(st) {
   const res = ckResults(room);
   if (CHIEU) return {
-    key: 'trao|' + JSON.stringify(Object.values(res.by).map(L => L.slice(0, 5).map(r => r.seat.id + r.tong))), akey: 'trao',
-    html: `<h1 class="ck-title">🏆 Chúc mừng các nhà thám hiểm ngôn ngữ!</h1><div class="ck-board">${Object.keys(CK_LV).map(lv => ckBoardHTML(res, lv, 5)).join('')}</div>`,
+    key: 'trao|' + JSON.stringify(res.rows.map(r => [r.seat.id, r.tong])), akey: 'trao',
+    html: `<h1 class="ck-title">🎉 Chúc mừng tất cả các nhà thám hiểm ngôn ngữ!</h1><div class="ck-celebration">${res.rows.map(r => `<div class="ck-celebrant"><img src="${faceOf(r.seat)}" alt=""><b>${esc(r.seat.kid)}</b><span>👏 Chúc mừng con!</span></div>`).join('')}</div>`,
     audio: () => { play([ckLoi('trao')]); confetti(); SND.beep('win'); }
   };
   const r = mySeat && res.rows.find(x => x.seat.id === mySeat.id);
   return {
-    key: 'trao|' + (r ? r.giai : ''), akey: 'trao',
-    html: `<div class="ck-award"><div class="ck-cup">${r ? CK_CUP[r.giai] : '🧭'}</div><h1>${r ? esc(r.giai) : 'Nhà thám hiểm ngôn ngữ'}</h1><p class="sub">${esc(ME.kid)} · ${CK_LV[r ? r.lv : ME.lv]}</p><p class="sub">Con đã hoàn thành Chung kết Rung chuông vàng. Cô khen con nhé!</p></div>`,
+    key: 'trao|' + (r ? r.tong : ''), akey: 'trao',
+    html: `<div class="ck-award"><div class="ck-cup">🧭</div><h1>Nhà thám hiểm ngôn ngữ</h1><p class="sub">${esc(ME.kid)} · ${CK_LV[r ? r.lv : ME.lv]}</p><p class="sub">Con đã hoàn thành Chung kết Rung chuông vàng. Cô khen con nhé!</p>${r ? `<p class="sub">⭐ ${r.sao} · P2 ${r.p2} · P3 ${r.p3} · P4 ${r.p4 == null ? '–' : r.p4} · Tổng <b>${r.tong}</b></p>` : ''}</div>`,
     audio: () => { confetti(); SND.beep('win'); }
   };
-}
-
-/* bảng xếp hạng phủ lên màn chiếu khi cô bật (giữa các phần) */
-function overlayBoard(st) {
-  let ov = $('#bdOv');
-  if (!CHIEU || !st.bang || st.ph === 'trao') { if (ov) ov.remove(); return; }
-  const res = ckResults(room);
-  if (!ov) { ov = document.createElement('div'); ov.id = 'bdOv'; ov.className = 'bd-ov'; document.body.appendChild(ov); }
-  ov.innerHTML = `<h2>📊 Bảng xếp hạng</h2><div class="ck-board">${Object.keys(CK_LV).map(lv => ckBoardHTML(res, lv, 5)).join('')}</div>`;
 }
 
 /* ---------- sao, chuông, pháo giấy ---------- */
@@ -570,7 +559,7 @@ function confetti() {
   setTimeout(() => box.innerHTML = '', 7000);
 }
 
-/* ======================= màn chiếu, bảng xếp hạng ======================= */
+/* ======================= màn chiếu ======================= */
 async function startChieu() {
   CODE = CHIEU;
   if (window.parent !== window) document.addEventListener('keydown', e => { try { parent.ckKey && parent.ckKey(e); } catch (er) { } });
@@ -582,28 +571,11 @@ async function startChieu() {
   app.innerHTML = `<div class="wrap"><div class="card" style="text-align:center"><h2>Màn chiếu phòng ${esc(CODE)}</h2><p class="vn">Cô chia sẻ cửa sổ này trên Zoom và tích "Chia sẻ âm thanh".</p><button class="btn red wide" id="st">🔊 Bật tiếng và bắt đầu</button></div></div>`;
   $('#st').onclick = go;
 }
-function startBang() {
-  CODE = BANG; document.body.classList.add('bang');
-  document.title = 'Bảng xếp hạng – Phòng ' + CODE;
-  $('#topInfo').innerHTML = `<span class="chieu-code">🔔 Chung kết Rung chuông vàng</span>`;
-  let t = null;
-  DB.on(roomPath(CODE), v => {
-    room = v || {};
-    if (t) return;
-    t = setTimeout(() => { t = null; drawBang(); }, 400);
-  });
-  function drawBang() {
-    const res = ckResults(room);
-    app.innerHTML = `<div class="ck-board bang">${Object.keys(CK_LV).map(lv => ckBoardHTML(res, lv, 5)).join('')}</div>`;
-  }
-}
-
 /* ======================= khởi động ======================= */
 (async function () {
   try { await DB.init({ perTab: QS.has('thu') }); }
   catch (e) { console.error(e); app.innerHTML = '<div class="wrap"><div class="card"><h2>Chưa kết nối được</h2><p class="vn">Mạng đang chập chờn. Ba mẹ tải lại trang giúp cô nhé.</p></div></div>'; return; }
   watchConn();
-  if (BANG) return startBang();
   if (CHIEU) return startChieu();
   codeScreen();
 })();

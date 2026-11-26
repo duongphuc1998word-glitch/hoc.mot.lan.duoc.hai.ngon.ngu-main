@@ -13,7 +13,7 @@ const HOST_SEC = [
   { id: 'd', n: 'Lời dẫn chuyển phần' },
   { id: 'k', n: 'Khen ngợi và động viên' },
   { id: 't', n: 'Tương tác và xử lý sự cố' },
-  { id: 'c', n: 'Xếp hạng và kết thúc' }
+  { id: 'c', n: 'Chúc mừng và kết thúc' }
 ];
 
 /* [code, star, sec, tiếng Anh, tiếng Trung, pinyin, ghi chú khi dùng, bé đáp lại] */
@@ -126,12 +126,12 @@ const HOST_RAW = [
 
   ['C1', 1, 'c', 'What a game! Ready for the next one?', '太精彩了！下一个游戏，准备好了吗？', 'Tài jīngcǎi le! Xià yí ge yóuxì, zhǔnbèi hǎo le ma?', 'Cuối Phần 1, 2, 3'],
   ['C2', 0, 'c', 'More and more fun!', '越来越好玩！', 'Yuè lái yuè hǎowán!', 'Trước Phần 2 và Phần 3'],
-  ['C3', 1, 'c', "Let's look at the scoreboard!", '我们来看排行榜！', 'Wǒmen lái kàn páihángbǎng!', 'Trước khi bật bảng OBS'],
-  ['C4', 1, 'c', 'Little Seed first! Now, Canopy!', '先看 Little Seed！现在看 Canopy！', 'Xiān kàn Little Seed! Xiànzài kàn Canopy!', 'Báo từng level, tách hẳn hai lượt'],
-  ['C5', 1, 'c', 'Who will be number one?', '谁会是第一名呢？', 'Shéi huì shì dì yī míng ne?', 'Kéo dài hồi hộp'],
-  ['C6', 1, 'c', 'Drumroll…', '咚咚咚……', 'Dōng dōng dōng……', 'Cả lớp vỗ bàn theo host'],
-  ['C7', 1, 'c', 'Congratulations, Bông!', '恭喜 Bông！', 'Gōngxǐ Bông!', 'Thay tên bé'],
-  ['C8', 1, 'c', 'Everyone is a hero today!', '今天大家都是小英雄！', 'Jīntiān dàjiā dōu shì xiǎo yīngxióng!', 'Ngay sau công bố xếp hạng'],
+  ['C3', 1, 'c', "Let's celebrate every explorer!", '让我们为每一位小小探险家喝彩！', 'Ràng wǒmen wèi měi yí wèi xiǎoxiǎo tànxiǎnjiā hècǎi!', 'Mời cả lớp cùng bắt đầu phần chúc mừng'],
+  ['C4', 1, 'c', "Let's cheer for every child!", '让我们为每个孩子喝彩！', 'Ràng wǒmen wèi měi ge háizi hècǎi!', 'Chúc mừng cả lớp, không gọi theo điểm hay level'],
+  ['C5', 1, 'c', 'What are you proud of today?', '今天你为自己感到骄傲的是什么？', 'Jīntiān nǐ wèi zìjǐ gǎndào jiāo’ào de shì shénme?', 'Mời các con chia sẻ một điều mình đã cố gắng'],
+  ['C6', 1, 'c', "Let's clap for everyone's hard work!", '让我们为大家的努力鼓掌！', 'Ràng wǒmen wèi dàjiā de nǔlì gǔzhǎng!', 'Cả lớp vỗ tay cho nỗ lực của mọi người'],
+  ['C7', 1, 'c', 'Congratulations, everyone!', '恭喜大家！', 'Gōngxǐ dàjiā!', 'Chúc mừng tất cả các con cùng một lời'],
+  ['C8', 1, 'c', 'Everyone is a hero today!', '今天大家都是小英雄！', 'Jīntiān dàjiā dōu shì xiǎo yīngxióng!', 'Tiếp tục nhấn mạnh mọi bạn đều được ghi nhận'],
   ['C9', 1, 'c', 'You are amazing Little Language Explorers!', '你们是最棒的小小语言探险家！', 'Nǐmen shì zuì bàng de xiǎoxiǎo yǔyán tànxiǎnjiā!', 'Câu cao trào cuối, giọng to nhất'],
   ['C10', 1, 'c', 'Thank you, moms and dads!', '谢谢爸爸妈妈们！', 'Xièxie bàba māmamen!', 'Cảm ơn phụ huynh'],
   ['C11', 0, 'c', "Let's take a photo! One, two, three — cheese!", '一起拍照！一、二、三，茄子！', 'Yìqǐ pāizhào! Yī, èr, sān, qiézi!', 'Chụp màn hình Zoom ảnh chung'],
@@ -221,8 +221,8 @@ const HOST_SIT = [
   { ok: ['P4-7'], v: ['Hỏi các con có thích câu chuyện không.', 'Hỏi để cả lớp đáp "Yes!" hoặc "喜欢！".'] },
   { ok: ['P4-8'], v: ['Khen câu chuyện hay để khép Phần 4.', 'Kết thúc phần truyện bằng một câu cảm thán.'] },
   { ok: ['D5-1'], v: ['Các con đã hoàn thành cả 4 trò chơi.', 'Giơ 4 ngón tay: cả bốn trò chơi đã xong.'] },
-  { ok: ['D5-2'], v: ['Tạo không khí ngay trước khi mở bảng xếp hạng (khoảnh khắc lớn).', 'Ngừng 2 giây, báo khoảnh khắc mọi người chờ đợi đã đến.'] },
-  { ok: ['D5-1', 'D5-2'], all: true, v: ['Chuyển từ Phần 4 sang xếp hạng: nói liền hai câu (xong cả 4 trò chơi, khoảnh khắc lớn đã đến).', 'Nói đủ hai nhịp trước khi mở bảng xếp hạng.'] },
+  { ok: ['D5-2'], v: ['Tạo không khí trước khi cùng chúc mừng cả lớp.', 'Ngừng 2 giây để các con sẵn sàng cho phần kết.'] },
+  { ok: ['D5-1', 'D5-2'], all: true, v: ['Chuyển từ Phần 4 sang chúc mừng: nhắc các con đã hoàn thành cả 4 trò chơi.', 'Nói đủ hai nhịp trước khi chúc mừng mọi người.'] },
 
   { ok: ['K1', 'K2', 'K3', 'K4'], v: ['Một bé trả lời đúng. Khen bé.', 'Bé vừa chọn đúng tranh. Nói một câu khen.'] },
   { ok: ['K2', 'K16', 'K17'], v: ['Rất nhiều bé cùng đúng một câu. Khen cả lớp.', 'Gần như cả lớp chọn đúng.'] },
@@ -258,12 +258,12 @@ const HOST_SIT = [
 
   { ok: ['C1'], v: ['Một phần chơi vừa xong. Khen và hỏi sẵn sàng phần tiếp chưa.', 'Cuối Phần 2, chuyển phần bằng một câu chung.'] },
   { ok: ['C2'], v: ['Báo các trò chơi ngày càng vui hơn.', 'Trước Phần 3, tăng hứng thú cho các con.'] },
-  { ok: ['C3'], v: ['Mời cả lớp xem bảng xếp hạng.', 'Chuẩn bị bật bảng điểm.'] },
-  { ok: ['C4'], v: ['Báo thứ tự công bố: Little Seed trước, Canopy sau.', 'Công bố xếp hạng theo từng level.'] },
-  { ok: ['C5'], v: ['Hỏi ai sẽ là người đứng đầu.', 'Kéo dài hồi hộp trước khi lật tên số một.'] },
-  { ok: ['C6', 'P2-9'], v: ['Rủ cả lớp vỗ bàn tạo tiếng trống trước khi công bố.', 'Tạo tiếng trống trước khi lật tên.'] },
-  { ok: ['C7'], v: ['Bé Bông đứng đầu bảng. Chúc mừng bé.', 'Bảng xếp hạng hiện tên Bông. Chúc mừng.'] },
-  { ok: ['C8'], v: ['Một bé không có tên trong top trông buồn. Nói câu chung cho cả lớp.', 'Ngay sau công bố xếp hạng, nói một câu để mọi bé đều vui.'] },
+  { ok: ['C3'], v: ['Mời cả lớp cùng bắt đầu phần chúc mừng.', 'Chuẩn bị chúc mừng tất cả các con.'] },
+  { ok: ['C4'], v: ['Chúc mừng cả lớp, không gọi theo điểm hay level.', 'Mời tất cả các con cùng nhận lời khen.'] },
+  { ok: ['C5'], v: ['Mời các con chia sẻ một điều mình đã cố gắng.', 'Hỏi mỗi bé tự hào điều gì trong buổi học.'] },
+  { ok: ['C6', 'P2-9'], v: ['Rủ cả lớp vỗ tay cho nỗ lực của mọi người.', 'Cùng vỗ tay để khép lại các trò chơi.'] },
+  { ok: ['C7'], v: ['Chúc mừng tất cả các con bằng một lời chung.', 'Cả lớp đều được ghi nhận.'] },
+  { ok: ['C8'], v: ['Một bé buồn vì nghĩ mình làm chưa tốt. Nói câu động viên cho cả lớp.', 'Động viên bé và nhắc mọi người đều đã cố gắng.'] },
   { ok: ['C9'], v: ['Câu cao trào cuối: các con là những nhà thám hiểm ngôn ngữ tuyệt vời nhất.', 'Khen cả lớp bằng danh hiệu của chương trình, giọng to nhất.'] },
   { ok: ['C10'], v: ['Cảm ơn ba mẹ đã đồng hành.', 'Cuối chương trình, gửi lời cảm ơn phụ huynh.'] },
   { ok: ['C11'], v: ['Chụp ảnh chung, đếm 1-2-3.', 'Rủ cả lớp tạo dáng chụp màn hình Zoom.'] },
